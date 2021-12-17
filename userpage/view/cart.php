@@ -118,6 +118,7 @@ if(!isset($_SESSION))
 						  <tbody>
 						  	<?php
 						  	include '../util/TienUtil.php';
+							  if(!empty($_SESSION["cart"])){
 						  	$tongtien = 0;
 						  	foreach($result as $value){
 						    echo '<tr class="alert" role="alert">';
@@ -187,6 +188,7 @@ if(!isset($_SESSION))
     				</div>
     				<button type="submit" name="btnthanhtoan" value="thanhtoan" class="btn btn-primary"> Thanh toán </button>
     			</div>
+				<?php } ?>
     		</div>
     	</div>
     </section>
