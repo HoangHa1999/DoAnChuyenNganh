@@ -99,7 +99,7 @@
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
-                                                            <select name="id_ngd" id="id_ngd">
+                                                            <select class="form-select" aria-label="Default select example" name="id_ngd" id="id_ngd">
                                                             <?php
                                                             $sql = "SELECT * FROM nguoidung WHERE admin = '0'";
                                                             $result = $conn->selectQuery($sql);
@@ -168,12 +168,12 @@
                                                     </div>
                                                     <div class="form-group col-md-8 offset-md-4">
                                                         <div class='form-check'>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio1" name = "tt" value = "1"
                                                                     class='form-check-input' >
                                                                 <label for="radio1">Đã thanh toán</label>
                                                             </div>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio2" name = "tt" value = "0"
                                                                     class='form-check-input'checked>
                                                                 <label for="radio2">Chưa thanh toán</label>
@@ -186,12 +186,12 @@
                                                     </div>
                                                     <div class="form-group col-md-8 offset-md-4">
                                                         <div class='form-check'>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio3" name = "ht" value = "1"
                                                                     class='form-check-input' >
                                                                 <label for="radio3">Chuyển khoản</label>
                                                             </div>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio4" name = "ht" value = "0"
                                                                     class='form-check-input'checked>
                                                                 <label for="radio4">Tiền mặt</label>

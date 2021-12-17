@@ -49,6 +49,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Tên bài viết</th>
+                                        <th>Nội dung bài viết</th>
                                         <th>Ngày viết</th>
                                     
                                         <th>Giờ viết</th>
@@ -71,6 +72,7 @@
                                         <td>'.$value['tenbaiviet'].'
                                             </div>
                                         </td>
+                                        <td>'.$value['noidung'].'</td>
                                         <td>'.$value['ngayviet'].'</td>
                                        
                                         <td>'.$value['gioviet'].'</td>

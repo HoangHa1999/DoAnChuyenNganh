@@ -31,8 +31,8 @@
 						<div class="row mb-4">
 							<div class="col-md-12 d-flex justify-content-between align-items-center">
 								<h4 class="product-select">Chọn loại sản phẩm</h4>
-								<select class="form-select" aria-label="Default select example" name="id_dm" id="id_dm" onchange="location = this.value;">
-								<option >--- Chọn Danh Mục ---</option>'
+								<select class="form-select" aria-label="Default select example" onchange="location = this.value;">
+								<option  disabled selected hidden>---  Chọn Danh Mục  ---</option>'
                                                             <?php
                                                             $sql = "SELECT * FROM danhmuc";
                                                             $result = $conn->selectQuery($sql);

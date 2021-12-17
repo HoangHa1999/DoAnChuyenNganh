@@ -122,13 +122,13 @@
                                                             <?php
                                                                 if($result[0]['gioitinh'] == true){
                                                             ?>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio1" name = "gt" value = "1"
                                                                     class='form-check-input' checked >
                                                                 <label for="radio1">Nam</label>
                                                             </div>
                                                            
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio2" name = "gt" value = "0"
                                                                     class='form-check-input'>
                                                                 <label for="radio2">Nữ</label>
@@ -136,13 +136,13 @@
                                                             <?php
                                                                 }else{
                                                             ?>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio1" name = "gt" value = "1"
                                                                     class='form-check-input' >
                                                                 <label for="radio1">Nam</label>
                                                             </div>
                                                            
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio2" name = "gt" value = "0"
                                                                     class='form-check-input' checked>
                                                                 <label for="radio2">Nữ</label>
@@ -214,12 +214,12 @@
                                                             <?php
                                                                 if($result[0]['hoatdong'] == true){
                                                             ?>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio3" name = "hd" value = "1"
                                                                     class='form-check-input' checked>
                                                                 <label for="radio3">Hoạt động</label>
                                                             </div>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio4" name = "hd" value = "0"
                                                                     class='form-check-input'>
                                                                 <label for="radio4">Không hoạt động</label>
@@ -227,12 +227,12 @@
                                                             <?php
                                                                 }else{
                                                             ?>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio3" name = "hd" value = "1"
                                                                     class='form-check-input' >
                                                                 <label for="radio3">Hoạt động</label>
                                                             </div>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio4" name = "hd" value = "0"
                                                                     class='form-check-input' checked>
                                                                 <label for="radio4">Không hoạt động</label>
@@ -252,12 +252,12 @@
                                                             <?php
                                                                 if($result[0]['admin'] == true){
                                                             ?>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio5" name = "ad" value = "1"
                                                                     class='form-check-input'checked>
                                                                 <label for="radio5">Admin</label>
                                                             </div>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio6" name = "ad" value = "0"
                                                                     class='form-check-input'>
                                                                 <label for="radio6">Không phải admin</label>
@@ -265,12 +265,12 @@
                                                             <?php
                                                                 }else{
                                                             ?>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio5" name = "ad" value = "1"
                                                                     class='form-check-input'>
                                                                 <label for="radio5">Admin</label>
                                                             </div>
-                                                            <div class="radio">
+                                                            <div class="form-check form-check-inline">
                                                                 <input type="radio" id="radio6" name = "ad" value = "0"
                                                                     class='form-check-input' checked>
                                                                 <label for="radio6">Không phải admin</label>

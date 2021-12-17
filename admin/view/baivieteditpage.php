@@ -64,15 +64,16 @@
                                     
                                         }
                                         
-                                        if(isset($_POST["idbaiviet"]) && isset($_POST["tenbaiviet"])&& isset($_POST["ngayviet"])&& isset($_POST["gioviet"])&& isset($_POST["idnguoiviet"]))
+                                        if(isset($_POST["idbaiviet"]) && isset($_POST["tenbaiviet"])&& isset($_POST["ngayviet"])&& isset($_POST["gioviet"])&& isset($_POST["idnguoiviet"]) && isset($_POST["ndbaiviet"]))
                                         {
                                             $id_bv = $_POST["idbaiviet"];
                                             $tenbaiviet = $_POST["tenbaiviet"];
                                             $ngayviet = $_POST["ngayviet"];
                                             $gioviet = $_POST["gioviet"];
                                             $idnguoiviet = $_POST["idnguoiviet"];
+                                            $noidung = $_POST["ndbaiviet"];
 
-                                            $sql = "UPDATE baiviet SET id_bv ='$id_bv', tenbaiviet = '$tenbaiviet', ngayviet = '$ngayviet',gioviet = '$gioviet', id_nguoidung = '$idnguoiviet' WHERE id_bv='$id_bv'";
+                                            $sql = "UPDATE baiviet SET id_bv ='$id_bv', tenbaiviet = '$tenbaiviet', noidung = '$noidung', ngayviet = '$ngayviet',gioviet = '$gioviet', id_nguoidung = '$idnguoiviet' WHERE id_bv='$id_bv'";
                                             $conn->updateQuery($sql);
                                             ?>
 				                                <script>
@@ -142,7 +143,7 @@
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
-                                                            <select name="idnguoiviet" id="idnguoiviet">
+                                                            <select class="form-select" aria-label="Default select example" name="idnguoiviet" id="idnguoiviet">
                                                             <?php
                                                             $sql = "SELECT * FROM nguoidung WHERE admin = '0'";
                                                             $arr = $conn->selectQuery($sql);
@@ -156,6 +157,19 @@
                                                             }
                                                             ?>  
                                                             </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <label>Nội dung:</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group has-icon-left">
+                                                            <div class="position-relative">
+                                                            <textarea class="form-control" name="ndbaiviet" rows="4" cols="50" >
+                                                                <?php echo $result[0]['noidung'] ?>
+                                                            </textarea>
                                                             </div>
                                                         </div>
                                                     </div>
