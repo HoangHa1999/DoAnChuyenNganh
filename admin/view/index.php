@@ -26,7 +26,7 @@
             <div class="page-heading">
                 <!-- Contextual classes start -->
                 <section class="section">
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-8 col-12">
                         <form action="../controller/logincontroller.php" method="POST" >
                             <div class="card">
                                 <div class="card-header">
@@ -70,9 +70,9 @@
                                                     
                                                     <div class="col-12 d-flex justify-content-end">
                                                         <button type="submit"
-                                                            class="btn btn-primary me-1 mb-1">Submit</button>
+                                                            class="btn btn-primary me-1 mb-1">Đăng nhập</button>
                                                         <button type="reset"
-                                                            class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                                                            class="btn btn-light-secondary me-1 mb-1">Làm mới</button>
                                                     </div>
                                                 </div>
                                             </div>

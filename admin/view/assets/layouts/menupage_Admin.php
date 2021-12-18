@@ -1,7 +1,12 @@
 <?php
 if(!isset($_SESSION)){
-session_start();
+    session_start();
 }
+if(empty($_SESSION["username"])){
+    header("location: ../view/index.php");
+            exit();
+}
+
 ?>
 <div id="sidebar" class="active">
             <div class="sidebar-wrapper active">
