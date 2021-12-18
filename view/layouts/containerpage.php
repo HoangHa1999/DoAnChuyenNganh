@@ -61,34 +61,4 @@
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-no-pb">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-4">
-						<div class="sort w-100 text-center ftco-animate">
-							<a href="product-1.php">
-							<div class="img" style="background-image: url(images/img-02.jpg);"></div>
-							<h3>Trà đào</h3>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="sort w-100 text-center ftco-animate">
-							<a href="product-2.php">
-							<div class="img" style="background-image: url(images/img-06.jpg);"></div>
-							<h3>Coffee</h3>
-							</a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="sort w-100 text-center ftco-animate">
-							<a href="product-3.php">
-							<div class="img" style="background-image: url(images/img-07.jpg);"></div>
-							<h3>Bánh ngọt</h3>
-							</a>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</section>
+		

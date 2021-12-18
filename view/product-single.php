@@ -37,7 +37,7 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/prod-1.jpg" class="image-popup prod-img-bg"><img src="../../admin/view/assets/images/faces/<?php  echo $result[0]['hinh']?>" class="img-fluid" alt="Colorlib Template"></a>
+    				<a href="images/prod-1.jpg" class="image-popup prod-img-bg"><img src="../admin/view/assets/images/faces/<?php  echo $result[0]['hinh']?>" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3><?php echo $result[0]['tensanpham']?></h3>

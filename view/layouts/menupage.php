@@ -53,11 +53,9 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Sản Phẩm</a>
               <div class="dropdown-menu" aria-labelledby="dropdown02">
-              	<a class="dropdown-item" href="product-1.php">Danh Sách Sản Phẩm Milk Tea</a>
-                <a class="dropdown-item" href="product-2.php">Danh Sách Sản Phẩm Coffee</a>
-                <a class="dropdown-item" href="product-3.php">Danh Sách Sản Phẩm Bánh ngọt</a>
+              	
                 <a class="dropdown-item" href="product.php">Danh Sách Sản Phẩm</a>
-                <a class="dropdown-item" href="product-single.php">Chi Tiết Sản Phẩm</a>
+                
               </div>
           	</li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">Giới Thiệu</a></li>

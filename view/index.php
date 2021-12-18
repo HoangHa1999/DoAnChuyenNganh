@@ -47,7 +47,7 @@
 
 				echo'	<div class="col-md-3 d-flex">';
 				echo'		<div class="product ftco-animate">';
-				echo'		<div class="img d-flex align-items-center justify-content-center" style="background-image: url(../../admin/view/assets//images/faces/'.$value['hinh'].');">';
+				echo'		<div class="img d-flex align-items-center justify-content-center" style="background-image: url(../admin/view/assets//images/faces/'.$value['hinh'].');">';
 				echo'			<div class="desc">';
 				echo'				<p class="meta-prod d-flex">';
 			

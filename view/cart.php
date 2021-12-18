@@ -129,7 +129,7 @@ if(!isset($_SESSION))
 							echo '			</label>';
 						    echo '	</td>';
 						    echo '	<td>';
-						    echo '		<div class="img" style="background-image: url(../../admin/view/assets/images/faces/'.$value['hinh'].');"></div>';
+						    echo '		<div class="img" style="background-image: url(../admin/view/assets/images/faces/'.$value['hinh'].');"></div>';
 						    echo '	</td>';
 						    echo '  <td>';
 						    echo '  	<div class="email">';
