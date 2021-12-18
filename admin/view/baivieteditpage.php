@@ -88,13 +88,13 @@
                                             <div class="form-body">
                                                 <div class="row">
                                                 <div class="col-md-4">
-                                                        <label>Mã bài viết:</label>
+                                                        <label>ID bài viết:</label>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
                                                                 <input type="text" class="form-control"
-                                                                    placeholder="Mã bài viết" name="idbaiviet" value = "<?php echo $result[0]['id_bv'] ?>">
+                                                                    placeholder="ID bài viết" name="idbaiviet" value = "<?php echo $result[0]['id_bv'] ?>">
                                                                 
                                                             </div>
                                                         </div>

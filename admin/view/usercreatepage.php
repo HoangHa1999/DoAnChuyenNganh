@@ -88,7 +88,7 @@
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
                                                                 <input type="text" class="form-control"
-                                                                    placeholder="Id người dùng" name="id_ngd" required="required">
+                                                                    placeholder="ID người dùng" name="id_ngd" required="required">
                                 
                                                             </div>
                                                         </div>

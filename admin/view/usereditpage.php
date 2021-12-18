@@ -94,7 +94,7 @@
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
                                                                 <input type="text" class="form-control"
-                                                                    placeholder="Id người dùng" name="id_ngd" value = "<?php echo $result[0]['id_ngd'] ?>">
+                                                                    placeholder="ID người dùng" name="id_ngd" value = "<?php echo $result[0]['id_ngd'] ?>">
                                 
                                                             </div>
                                                         </div>
