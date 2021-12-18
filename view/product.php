@@ -50,7 +50,7 @@
 							<?php
 				include '../util/TienUtil.php';
 				
-				$sql = "SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm";
+				$sql = "SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm ORDER BY danhmuc.id_dm";
 				if(isset($_GET["id"]))
 				{
 					$id_dm = $_GET["id"];
@@ -59,27 +59,29 @@
 				$result = $conn->selectQuery($sql);  
 		
 				foreach($result as $value){
-					echo'	<div class="col-md-3 d-flex">';
-					echo'		<div class="product ftco-animate">';
-					echo'		<div class="img d-flex align-items-center justify-content-center" style="background-image: url(../admin/view/assets//images/faces/'.$value['hinh'].');">';
-					echo'			<div class="desc">';
-					echo'				<p class="meta-prod d-flex">';
-				
-					echo'				<a class="d-flex align-items-center justify-content-center" href="product-single.php?id='.$value['id_sp'].'"><span class="flaticon-visibility"></span></a>';
-					echo'					</p>';
-					echo'				</div>';
-					echo'			</div>';
-					echo'			<div class="text text-center">';
-					echo'				<span class="sale">Sale</span>';
-					echo'				<span class="category">'.$value['tendanhmuc'].'</span>';
-					echo'				<h2>'.$value['tensanpham'].'</h2>';
-				echo'<p class="mb-0"><span class="price price-sale">'.giagoc($value['gia']).'</span> <span class="price">'.chuyentien($value['gia']).'</span></p>';
-					echo' <a href="product-single.php?id='.$value['id_sp'].'"><button class="btn btn-primary py-3 px-5 mr-2"> Thêm vào giỏ hàng </button> </a>';
-					echo'			</div>';
-					echo'		</div>';
-					echo'	</div>';
+					?>  
+							  <div class="col-md-3 d-flex">
+								  <div class="product ftco-animate">
+								  <div class="img d-flex align-items-center justify-content-center" style="background-image: url(../admin/view/assets//images/faces/<?php echo $value['hinh'] ?>);">
+									  <div class="desc">
+										  <p class="meta-prod d-flex">
+					  
+										  <a class="d-flex align-items-center justify-content-center" href="product-single.php?id=<?php echo $value['id_sp'] ?>"><span class="flaticon-visibility"></span></a>
+											  </p>
+										  </div>
+									  </div>
+									  <div class="text text-center">
+										  <span class="sale">Sale</span>
+										  <span class="category"><?php echo $value['tendanhmuc'] ?></span>
+										  <h2><?php echo $value['tensanpham'] ?></h2>
+					  <p class="mb-0"><span class="price price-sale"><?php echo giagoc($value['gia']) ?></span> <span class="price"><?php echo chuyentien($value['gia']) ?></span></p>
+						   <a href="product-single.php?id=<?php echo $value['id_sp'] ?>"><button class="btn btn-primary py-3 px-5 mr-2"> Thêm vào giỏ hàng </button> </a>
+									  </div>
+								  </div>
+							  </div>
+				<?php
 				}
-					?>
+				?>
 
 					
 
