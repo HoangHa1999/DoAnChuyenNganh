@@ -39,6 +39,16 @@
                     </div>
                 </div>
 
+                <script LANGUAGE="JavaScript">
+    				function laSoNguyenAm(){
+                        if(document.getElementById("sdt").value < 0)
+                        {
+                            alert('Vui lòng nhập đúng số điện thoại');
+                            document.getElementById("sdt").value = "";
+                        }
+                        
+                    }
+				</script>
                
 
                 <!-- Contextual classes start -->
@@ -157,8 +167,8 @@
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
-                                                                <input type="text" class="form-control"
-                                                                    placeholder="Số điện thoại" name="sdt"required="required">
+                                                                <input type="number" class="form-control"
+                                                                    placeholder="Số điện thoại" id ="sdt" name="sdt" onkeyup="laSoNguyenAm()" required="required">
                                                                 
                                                             </div>
                                                         </div>

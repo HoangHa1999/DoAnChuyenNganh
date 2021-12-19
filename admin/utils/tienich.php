@@ -20,7 +20,7 @@ function uploadFiles($uploadFiles){
             move_uploaded_file($file["tmp_name"], $uploadPath . '/' . $file["name"]);
         
         }else{
-            $errors[] = "The file " . basename($file["name"]) . " isn't valid.";
+            $errors[] = "Thêm thất bại.</br> File " . basename($file["name"]) . " không hợp lệ !!!</br> Vui lòng chọn file hình";
 
         }
         return $errors;

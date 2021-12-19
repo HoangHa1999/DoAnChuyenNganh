@@ -40,7 +40,16 @@
                     </div>
                 </div>
 
-               
+                <script LANGUAGE="JavaScript">
+    				function laSoNguyenAm(){
+                        if(document.getElementById("gia").value < 0)
+                        {
+                            alert('Vui lòng nhập số dương.');
+                            document.getElementById("gia").value = "";
+                        }
+                        
+                    }
+				</script>
 
                 <!-- Contextual classes start -->
                 <section class="section">
@@ -62,7 +71,7 @@
                                             $errors = uploadFiles($uploadedFile);
                                             
                                             if(!empty($errors)){
-                                                print_r($errors);
+                                                echo $errors[0];
                                                 exit;
                                             }
                                         }
@@ -141,7 +150,7 @@
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
                                                                 <input type="text" class="form-control"
-                                                                    placeholder="Giá .... $" name="gia"required="required">
+                                                                    placeholder="Giá .... $" id ="gia" name="gia" required="required" onkeyup="laSoNguyenAm()">
                                                                 
                                                             </div>
                                                         </div>
