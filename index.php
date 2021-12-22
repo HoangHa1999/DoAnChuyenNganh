@@ -1,3 +1,7 @@
-<script>
-    location.href = 'view/index.php';
-</script>
+<?php 
+include 'utils/MySQLUtils.php';
+function loadClass($className)
+{
+    include "./models/$className.php";
+}
+?>

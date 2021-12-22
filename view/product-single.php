@@ -37,7 +37,7 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
-    				<a href="images/prod-1.jpg" class="image-popup prod-img-bg"><img src="../admin/view/assets/images/faces/<?php  echo $result[0]['hinh']?>" class="img-fluid" alt="Colorlib Template"></a>
+    				<a href="../admin/view/assets/images/faces/<?php  echo $result[0]['hinh']?>" class="image-popup prod-img-bg"><img src="../admin/view/assets/images/faces/<?php  echo $result[0]['hinh']?>" class="img-fluid" alt="Colorlib Template"></a>
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3><?php echo $result[0]['tensanpham']?></h3>
@@ -72,7 +72,7 @@
 	                   <i class="fa fa-minus"></i>
 	                	</button>
 	            		</span>
-	             	<input type="text" id="quantity" name="quantity[<?php echo $id_sp ?>]" class="quantity form-control input-number" value="1" min="1" max="100">
+	             	<input type="text" id="quantity" readonly name="quantity[<?php echo $id_sp ?>]" class="quantity form-control input-number" value="1" min="1" max="100">
 	             	<span class="input-group-btn ml-2">
 	                	<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
 	                     <i class="fa fa-plus"></i>

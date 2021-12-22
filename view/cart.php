@@ -83,7 +83,9 @@ if(!isset($_SESSION))
 				</script>
 				<?php
 				}else if(isset($_POST['btnthanhtoan'])){
-					echo "thanhtoan";
+					?>
+					<img  src="images/qrcode.jpg" style="width:550px;height:500px;" >
+					<?php
 					exit;
 				}
 				
@@ -96,6 +98,7 @@ if(!isset($_SESSION))
 		$result = $conn->selectQuery($sql); 
 		
 	}
+	if(!empty($_SESSION["cart"])){
 	?>
 
 <form class="form form-horizontal"  method = "POST" action = "cart.php?action=submit">
@@ -118,7 +121,7 @@ if(!isset($_SESSION))
 						  <tbody>
 						  	<?php
 						  	include '../util/TienUtil.php';
-							  if(!empty($_SESSION["cart"])){
+							 
 						  	$tongtien = 0;
 						  	foreach($result as $value){
 						    echo '<tr class="alert" role="alert">';
@@ -140,7 +143,7 @@ if(!isset($_SESSION))
 						    echo '  <td>'.chuyentien($value['gia']).'</td>';
 						    echo '  <td class="quantity">';
 					        echo '	<div class="input-group" style="width: 78px;">';
-				            echo ' 	<input type="text" name="quantity['.$value['id_sp'].']" class="quantity form-control input-number" value="'.$_SESSION['cart'][$value['id_sp']].'" min="1" max="100">';
+				            echo ' 	<input type="number" name="quantity['.$value['id_sp'].']" class="quantity form-control input-number" value="'.$_SESSION['cart'][$value['id_sp']].'" min="1" max="100">';
 				          	echo '</div>';
 				          	echo '</td>';
 							
@@ -188,11 +191,11 @@ if(!isset($_SESSION))
     				</div>
     				<button type="submit" name="btnthanhtoan" value="thanhtoan" class="btn btn-primary"> Thanh toán </button>
     			</div>
-				<?php } ?>
     		</div>
     	</div>
     </section>
 </form>
+<?php } ?>
 
     <footer class="ftco-footer">
 		<?php include 'layouts/footerpage.php' ?>
