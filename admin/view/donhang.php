@@ -66,7 +66,7 @@
                                 <tbody>
                                     <?php
                                         function chuyenUSD($chuyen){
-                                            return number_format($chuyen * 22000,0,",",".") ." VNĐ";
+                                            return number_format($chuyen * 23000,0,",",".") ." VNĐ";
                                         }
                                         $conn= new MySQLUtils();
                                         $conn->connectDB();
