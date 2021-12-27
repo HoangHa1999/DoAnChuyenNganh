@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include "layouts/headerpage.php" ?>
+    <?php include "view/layouts/headerpage.php" ?>
   </head>
   <body>
     <?php include "layouts/menupage.php" ?>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/slider-02.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('view/images/slider-02.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -22,7 +22,7 @@
 
     <section class="ftco-section">
       <div class="container" >
-        <div class="row d-flex" style="background-image: url(./images/about-img.jpg);">
+        <div class="row d-flex" style="background-image: url(view/images/about-img.jpg);">
         <?php 
             $arrayten =array("Quảng cáo sản phẩm","Chuỗi cà phê được đánh giá","Lượt bình luận và đánh giá của sản phẩm","Lượt bình luận và đánh giá của sản phẩm","Lượt bình luận và đánh giá của sản phẩm","Lượt bình luận và đánh giá của sản phẩm");
             $arrayngay =array("September 9,2021","January 5,2021 ","May 6, 2021","May 6, 2021","May 6, 2021","May 6, 2021");
@@ -66,9 +66,9 @@
     </section>	
     
     <footer class="ftco-footer">
-		<?php include 'layouts/footerpage.php' ?>
+		<?php include 'view/layouts/footerpage.php' ?>
     </footer>
     <!-- loader -->
-   <?php include "layouts/loaderpage.php" ?>
+   <?php include "view/layouts/loaderpage.php" ?>
   </body>
 </html>

@@ -1,10 +1,17 @@
+<?php
+if(!isset($_SESSION)){
+    session_start();
+}
+
+$ngd=new nguoidungmodel();
+?>
 <div class="wrap">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 d-flex align-items-center">
 						<p class="mb-0 phone pl-md-2">
-							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
-							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
+						<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +84 399 161 596</a> 
+						<a href="#" ><span class="fa fa-paper-plane mr-1"></span> ngocha1999.hh@gmail.com</a>	
 						</p>
 					</div>
 					<div class="col-md-6 d-flex justify-content-md-end">
@@ -17,7 +24,23 @@
 			    		</p>
 		        </div>
 		        <div class="reg">
-		        	<p class="mb-0"><a href="register.php" class="mr-2">Đăng Ký</a> <a href="login.php">Đăng Nhập</a></p>
+				<?php
+                    if (!isset($_SESSION["idnguoidung"])){
+				?>
+		        	<p class="mb-0">
+						<a href="index.php?controller=registercontroller&action=register" class="mr-2">Đăng Ký</a> 
+						<a href="index.php?controller=logincontroller&action=login">Đăng Nhập</a>
+					</p>
+				<?php
+					}else{
+				?>
+					<p class="mb-0">
+					<font color="white">Xin chào <?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?> </font>&emsp;
+						<a href="index.php?controller=logincontroller&action=logout">Đăng xuất</a>
+					</p>
+				<?php
+					}
+				?>
 		        </div>
 					</div>
 				</div>
@@ -27,7 +50,7 @@
 	    <div class="container">
 	      <a class="navbar-brand" href="index.php">TH-<span>Coffee</span></a>
 	      <div class="order-lg-last btn-group">
-          <a href="cart.php" class="btn-cart dropdown-toggle dropdown-toggle-split">
+          <a href="index.php?controller=cartcontroller&action=cart" class="btn-cart dropdown-toggle dropdown-toggle-split">
           	<span class="flaticon-shopping-bag"></span>
           	
           </a>
@@ -42,25 +65,29 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.php" class="nav-link">Trang Chủ</a></li>
 	          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Bài Viết</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Tin Tức</a>
               <div class="dropdown-menu" aria-labelledby="dropdown03">
-              	<a class="dropdown-item" href="blog-1.php">Bài viết 1</a>
-				<a class="dropdown-item" href="blog-2.php">Bài Viết 2</a>
-				<a class="dropdown-item" href="blog-3.php">Bài Viết 3</a>
-				<a class="dropdown-item" href="blog.php">Bài Viết</a>
-				<a class="dropdown-item" href="blog-single.php">Chi Tiết Bài Viết</a>
+              	
+				<a class="dropdown-item" href="index.php?controller=blogcontroller&action=blog">Tin Tức</a>
+				
               </div>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Sản Phẩm</a>
               <div class="dropdown-menu" aria-labelledby="dropdown02">
               	
-                <a class="dropdown-item" href="product.php">Danh Sách Sản Phẩm</a>
+                <a class="dropdown-item" href="index.php?controller=sanphamcontroller&action=product">Danh Sách Sản Phẩm</a>
                 
               </div>
           	</li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">Giới Thiệu</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Liên Hệ</a></li>
+	          <li class="nav-item"><a href="index.php?controller=aboutcontroller&action=about" class="nav-link">Giới Thiệu</a></li>
+	          <li class="nav-item"><a href="index.php?controller=contactcontroller&action=contact" class="nav-link">Liên Hệ</a></li>
 	        </ul>
 	      </div>
 	    </div>
+		<div class="order-lg-last btn-group">
+       	  	<form action="index.php" class="search-form">
+                <input type="text" class="form-control" placeholder="Tìm kiếm" name='kw'>
+                <span class="fa fa-search" type="submit"></span>
+              </form>
+       	  </div>
 	  </nav>

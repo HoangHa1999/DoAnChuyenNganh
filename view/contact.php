@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include "layouts/headerpage.php"?>
+    <?php include "view/layouts/headerpage.php"?>
   </head>
   <body>
-  	<?php include "layouts/menupage.php"?>
+  	<?php include "view/layouts/menupage.php"?>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/slider-02.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('view/images/slider-02.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Home <i class="fa fa-chevron-right"></i></a></span> <span>Contact Us <i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">Contact Us</h2>
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Trang Chủ <i class="fa fa-chevron-right"></i></a></span> <span>Liên Hệ <i class="fa fa-chevron-right"></i></span></p>
+            <h2 class="mb-0 bread">Liên Hệ</h2>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+					            <p><span>Địa chỉ:</span> 180 cao lỗ,phường 4,quận 8, TP HCM</p>
 					          </div>
 				          </div>
 								</div>
@@ -41,7 +41,7 @@
 				        			<span class="fa fa-phone"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+					            <p><span>Số điện thoại:</span> <a href="tel://0399161596">+84 399 161 596</a></p>
 					          </div>
 				          </div>
 								</div>
@@ -51,7 +51,7 @@
 				        			<span class="fa fa-paper-plane"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+					            <p><span>Email:</span> <a href="mailto:ngocha1999.hh@gmail.com">ngocha@gmail.com</a></p>
 					          </div>
 				          </div>
 								</div>
@@ -61,7 +61,7 @@
 				        			<span class="fa fa-globe"></span>
 				        		</div>
 				        		<div class="text">
-					            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+					            <p><span>Website</span> <a href="http://thcoffee.xyz/">thcoffee.xyz</a></p>
 					          </div>
 				          </div>
 								</div>
@@ -69,25 +69,24 @@
 							<div class="row no-gutters">
 								<div class="col-md-7">
 									<div class="contact-wrap w-100 p-md-5 p-4">
-										<h3 class="mb-4">Contact Us</h3>
+										<h3 class="mb-4">Liên Hệ với chúng tôi</h3>
 										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
 											<div class="row">
-												<?php
-												$arrayfor = array("name","email","subject");
-												$arrayid = array("name","email","subject");
-												$arrayplaceholder = array("Name","Email","Subject");
-												$arraytype = array("text","email","text");
-												$arrayTen = array("Tên ","Email","Chủ thể");
-												for($i =0;$i <3;$i++){
-												echo '<div class="col-md-6">';
-												echo '	<div class="form-group">';
-												echo '		<label class="label" for="'.$arrayfor[$i].'">'.$arrayTen[$i].'</label>';
-												echo '		<input type="'.$arraytype[$i].'" class="form-control" name="name" id="'.$arrayid[$i].'" placeholder="'.$arrayplaceholder[$i].'">';
-												echo '	</div>';
-												echo '</div>';
+												
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">Tên</label>
+														<input type="text" class="form-control" name="txt_name" placeholder="Tên">
+													</div>
+												</div>
 
-	          									}
-												?>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="name">Email</label>
+														<input type="email" class="form-control" name="txt_email" placeholder="Email">
+													</div>
+												</div>
+
 												<div class="col-md-12">
 													<div class="form-group">
 														<label class="label" for="#">Ghi chú</label>
@@ -96,7 +95,7 @@
 												</div>
 												<div class="col-md-12">
 													<div class="form-group">
-														<input type="submit" value="Send Message" class="btn btn-primary">
+														<input type="submit" value="Gửi cho chúng tôi" name = "btngui" class="btn btn-primary">
 														<div class="submitting"></div>
 													</div>
 												</div>
@@ -115,9 +114,9 @@
 		</section>
 
 		<footer class="ftco-footer">
-		<?php include 'layouts/footerpage.php' ?>
+		<?php include 'view/layouts/footerpage.php' ?>
     </footer>
     <!-- loader -->
-   <?php include "layouts/loaderpage.php" ?>
+   <?php include "view/layouts/loaderpage.php" ?>
   </body>
 </html>

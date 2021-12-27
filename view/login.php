@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  		<?php include 'layouts/headerpage.php' ?>
+  		<?php include 'view/layouts/headerpage.php' ?>
   </head>
   <body>
-  <?php include 'layouts/menupage.php' ?>
+  <?php include 'view/layouts/menupage.php' ?>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/slider-02.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('view/images/slider-02.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -23,51 +23,32 @@
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form  action="../controller/usercontroller.php" method="POST" class="billing-form">
+						<form  action="index.php?controller=logincontroller&action=submit" method="POST" class="billing-form">
 							<h3 class="mb-4 billing-heading">Thông Tin Đăng Nhập</h3>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-12">
 	                <div class="form-group">
-	                	<label for="TaiKhoan">Tài Khoản</label>
-	                  <input type="text" name="username" class="form-control" placeholder="Username">
+	                	<label for="emailaddress">Email</label>
+	                  <input type="email" name="txt_email" class="form-control" placeholder="Email">
 	                </div>
 	              </div>
                 <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="lastname">Mật Khẩu</label>
-                        <input type="password" name="password" id="msg_subject" class="form-control" placeholder="Password" required data-error="Please enter your message subject">
+                        <input type="password" name="txt_password"  class="form-control" placeholder="Password" required data-error="Vui lòng nhập password.">
 	                </div>
                 </div>
                 
-                <div class="w-100"></div>
-                <div class="col-md-12">
-                    <div class="form-group">
-						<div class="col-md-12">
-							<div class="checkbox">
-									<label><input type="checkbox" value="" class="mr-2"> Nhớ mật khẩu</label>
-							</div>
-						</div>
-					</div>
+                
 	            </div>
                 <div class="w-100"></div>
                 <div class="col-md-12">
                     <div class="form-group">
-					<button type="submit" class="btn btn-primary">Đăng nhập</button>
+					<button type="submit" name ="btndangnhap" class="btn btn-primary">Đăng nhập</button>
 					    <div class="submitting"></div>
 					</div>
 	            </div>
-                <div class="w-100"></div>
-                <div class="col-sm-12 col-md">
-            <div class="ftco-footer-widget mb-4">
-              
-              <p>Hoặc đăng nhập với:</p>
-              <ul class="ftco-footer-social list-unstyled mt-2">
-                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
+               
 	          </form><!-- END -->
 
 
@@ -77,9 +58,9 @@
     	</div>
     </section>
 		<footer class="ftco-footer">
-		<?php include 'layouts/footerpage.php' ?>
+		<?php include 'view/layouts/footerpage.php' ?>
     </footer>
     <!-- loader -->
-   <?php include "layouts/loaderpage.php" ?>
+   <?php include "view/layouts/loaderpage.php" ?>
   </body>
 </html>

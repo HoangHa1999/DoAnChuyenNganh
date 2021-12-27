@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include "layouts/headerpage.php" ?>
-	<?php include '../util/MySQLUtils.php' ?>
+    <?php include "view/layouts/headerpage.php" ?>
+	
   </head>
   <body>
-  	<?php include "layouts/menupage.php" ?>
+  	<?php include "view/layouts/menupage.php" ?>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/slider-02.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('view/images/slider-02.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -20,10 +20,7 @@
       </div>
     </section>
 
-	<?php
-	$conn= new MySQLUtils();
-	$conn->connectDB();
-	?>
+	
     <section class="ftco-section">
 			<div class="container">
 				<div class="row">
@@ -33,13 +30,11 @@
 								<h4 class="product-select">Chọn loại sản phẩm</h4>
 								<select class="form-select" aria-label="Default select example" onchange="location = this.value;">
 								<option  disabled selected hidden>---  Chọn Danh Mục  ---</option>'
-                                                            <?php
-                                                            $sql = "SELECT * FROM danhmuc";
-                                                            $result = $conn->selectQuery($sql);
-
-                                                            foreach($result as $value)
+								<?php
+                                                           
+                                                            foreach($datadm as $value)
                                                             {
-                                                                echo '<option value="product.php?id='.$value['id_dm'].'">'.$value['tendanhmuc'].'</option>';
+                                                                echo '<option value="index.php?controller=sanphamcontroller&action=product&id='.$value['id_dm'].'">'.$value['tendanhmuc'].'</option>';
                                                             }
                                                             ?>  
                                                             </select>
@@ -48,25 +43,19 @@
 						<div class="row" style="width:1150px; ">
 						
 							<?php
-				include '../util/TienUtil.php';
+				include 'util/TienUtil.php';
 				
-				$sql = "SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm ORDER BY danhmuc.id_dm";
-				if(isset($_GET["id"]))
-				{
-					$id_dm = $_GET["id"];
-					$sql = "SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm WHERE sanpham.id_danhmuc = '$id_dm'";
-				}
-				$result = $conn->selectQuery($sql);  
+				
 		
-				foreach($result as $value){
+				foreach($data as $value){
 					?>  
 							  <div class="col-md-3 d-flex">
 								  <div class="product ftco-animate">
-								  <div class="img d-flex align-items-center justify-content-center" style="background-image: url(../admin/view/assets//images/faces/<?php echo $value['hinh'] ?>);">
+								  <div class="img d-flex align-items-center justify-content-center" style="background-image: url(admin/view/assets//images/faces/<?php echo $value['hinh'] ?>);">
 									  <div class="desc">
 										  <p class="meta-prod d-flex">
 					  
-										  <a class="d-flex align-items-center justify-content-center" href="product-single.php?id=<?php echo $value['id_sp'] ?>"><span class="flaticon-visibility"></span></a>
+										  <a class="d-flex align-items-center justify-content-center" href="index.php?controller=sanphamcontroller&action=productdetail&id=<?php echo $value['id_sp'] ?>"><span class="flaticon-visibility"></span></a>
 											  </p>
 										  </div>
 									  </div>
@@ -75,7 +64,7 @@
 										  <span class="category"><?php echo $value['tendanhmuc'] ?></span>
 										  <h2><?php echo $value['tensanpham'] ?></h2>
 					  <p class="mb-0"><span class="price price-sale"><?php echo giagoc($value['gia']) ?></span> <span class="price"><?php echo chuyentien($value['gia']) ?></span></p>
-						   <a href="product-single.php?id=<?php echo $value['id_sp'] ?>"><button class="btn btn-primary py-3 px-5 mr-2"> Thêm vào giỏ hàng </button> </a>
+						   <a href="index.php?controller=sanphamcontroller&action=productdetail&id=<?php echo $value['id_sp'] ?>"><button class="btn btn-primary py-3 px-5 mr-2"> Thêm vào giỏ hàng </button> </a>
 									  </div>
 								  </div>
 							  </div>
@@ -96,10 +85,10 @@
 		</section>
 
 		<footer class="ftco-footer">
-		<?php include 'layouts/footerpage.php' ?>
+		<?php include 'view/layouts/footerpage.php' ?>
     </footer>
 	
     <!-- loader -->
-   <?php include "layouts/loaderpage.php" ?>
+   <?php include "view/layouts/loaderpage.php" ?>
   </body>
 </html>

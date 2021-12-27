@@ -65,8 +65,11 @@
                                         
                                         $conn= new MySQLUtils();
                                         $conn->connectDB();
+                                        
+                                            
                                         if(isset($_POST["id_ngd"]) && isset($_POST["tennguoidung"])&& isset($_POST["gt"])&& isset($_POST["email"])&& isset($_POST["password"])&& isset($_POST["sdt"])&& isset($_POST["diachi"])&& isset($_POST["hd"])&& isset($_POST["ad"]))
                                         {
+                                           
                                             $id_ngd = $_POST["id_ngd"];
                                             $tennguoidung = $_POST["tennguoidung"];
                                             $gt = $_POST["gt"];
