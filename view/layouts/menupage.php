@@ -28,14 +28,14 @@ $ngd=new nguoidungmodel();
                     if (!isset($_SESSION["idnguoidung"])){
 				?>
 		        	<p class="mb-0">
-						<a href="index.php?controller=registercontroller&action=register" class="mr-2">Đăng Ký</a> 
+						<a href="index.php?controller=registercontroller&action=register" class="mr-2">Đăng Ký</a>&nbsp;/&nbsp;
 						<a href="index.php?controller=logincontroller&action=login">Đăng Nhập</a>
 					</p>
 				<?php
 					}else{
 				?>
 					<p class="mb-0">
-					<font color="white">Xin chào <?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?> </font>&emsp;
+					<font color="white">Xin chào <?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?> </font>&nbsp;/&nbsp;
 						<a href="index.php?controller=logincontroller&action=logout">Đăng xuất</a>
 					</p>
 				<?php

@@ -37,5 +37,12 @@ $c = isset($_GET['controller'])?$_GET['controller']:'trangchu';
                 {
                     include './controller/cartcontroller.php';
                 }
-
+                if ($c=='forgotcontroller')
+                {
+                    include './controller/forgotcontroller.php';
+                }
+                if ($c=='changecontroller')
+                {
+                    include './controller/changecontroller.php';
+                }
 ?>

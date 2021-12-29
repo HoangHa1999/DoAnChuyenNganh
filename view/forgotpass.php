@@ -12,8 +12,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Trang Chủ <i class="fa fa-chevron-right"></i></a></span> <span>Đăng Nhập <i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">Đăng Nhập</h2>
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Trang Chủ <i class="fa fa-chevron-right"></i></a></span> <span>Quên Mật Khẩu <i class="fa fa-chevron-right"></i></span></p>
+            <h2 class="mb-0 bread">Quên Mật Khẩu</h2>
           </div>
         </div>
       </div>
@@ -23,33 +23,26 @@
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form  action="index.php?controller=logincontroller&action=submit" method="POST" class="billing-form">
-							<h3 class="mb-4 billing-heading">Thông Tin Đăng Nhập</h3>
+						<form  action="index.php?controller=forgotcontroller&action=submit" method="POST" class="billing-form">
+							<h3 class="mb-4 billing-heading">Quên Mật Khẩu</h3>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="emailaddress">Email</label>
-	                  <input type="email" name="txt_email" class="form-control"  required="required">
+	                  <input type="email" name="txt_email" class="form-control" placeholder="Email" required="required">
 	                </div>
 	              </div>
-                <div class="col-md-12">
-	                <div class="form-group">
-	                	<label for="lastname">Mật Khẩu</label>
-                        <input type="password" name="txt_password"  class="form-control" required data-error="Vui lòng nhập password.">
-	                </div>
-                </div>
-                
                 
 	            </div>
                 <div class="w-100"></div>
                 <div class="col-md-12">
                     <div class="form-group">
-					<button type="submit" name ="btndangnhap" class="btn btn-primary">Đăng nhập</button>
+					<button type="submit" name ="btngui" class="btn btn-primary">Gửi Mail</button>
 					    <div class="submitting"></div>
 					</div>
 	            </div>
-              <p><a href="index.php?controller=forgotcontroller&action=forgotpass"> Quên mật khẩu </a>&emsp;/&emsp;<a href="index.php?controller=changecontroller&action=changepass"> Đổi mật khẩu </a></p>
-             
+              
+               
 	          </form><!-- END -->
 
 

@@ -46,14 +46,14 @@ return false;
                     <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="emailaddress">Email</label>
-	                  <input type="email" name="txt_email" class="form-control" placeholder="">
+	                  <input type="email" name="txt_email" class="form-control" placeholder="" required="required">
 	                </div>
                 </div>
 				<div class="w-100"></div>
                     <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="emailaddress">Tên người dùng</label>
-	                  <input type="text" name="txt_name" class="form-control" placeholder="">
+	                  <input type="text" name="txt_name" class="form-control" placeholder="" required="required">
 	                </div>
                 </div>
 
@@ -61,8 +61,8 @@ return false;
                     <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="emailaddress">Giới tính</label> <br>
-						&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label for="html">Nam</label>&ensp;
-	                <input type="radio" name="rdi_gioitinh" id="rdi_Nam" checked value="1"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+						&emsp;&emsp;&emsp;&emsp;&emsp;<label for="html">Nam</label>&ensp;
+	                <input type="radio" name="rdi_gioitinh" id="rdi_Nam" checked value="1"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 					<label for="html">Nữ</label>&ensp;
 	                <input type="radio" name="rdi_gioitinh" id="rdi_Nu" value="0">
 	                </div>
@@ -86,7 +86,7 @@ return false;
                     <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="emailaddress">Địa chỉ</label>
-	                  <input type="text" name="txt_Address" class="form-control" placeholder="">
+	                  <input type="text" name="txt_Address" class="form-control" placeholder="" required="required">
 	                </div>
                 </div>
 		            
@@ -94,7 +94,7 @@ return false;
 		            <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="phone">Số Điện Thoại</label>
-	                  <input type="text" name="txt_Phone" class="form-control" placeholder="">
+	                  <input type="text" name="txt_Phone" class="form-control" placeholder="" required="required">
 	                </div>
 	               	
 	              </div>

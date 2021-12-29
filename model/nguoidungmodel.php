@@ -18,6 +18,18 @@ class nguoidungmodel extends Db
       return $this->updateQuery($sql);
     }
 
+    function nguoidungcopass($pw)
+    {
+      $sql = "SELECT * FROM nguoidung WHERE password = '$pw'";
+      return $this->updateQuery($sql);
+    }
+
+    function capnhatpass($email, $pw)
+    {
+      $sql = "UPDATE nguoidung SET password = '$pw' WHERE  email = '$email'";
+      return $this->updateQuery($sql);
+    }
+
     function search($kw)
     {
       $sql="SELECT * FROM nguoidung where tennguoidung like ?";

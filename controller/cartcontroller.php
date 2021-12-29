@@ -137,7 +137,7 @@ try {
     //Recipients
     $mail->setFrom('ngocha1999.hh@gmail.com', 'TH COFFEE');
     $mail->addAddress($email, $ten);     //Add a recipient
-    
+    $mail->addCC('dh51806426@student.stu.edu.vn', 'admin');
 
     
 
