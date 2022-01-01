@@ -74,7 +74,7 @@ try {
     $mail->send();
     //echo 'Gửi email thành công';
 	$message = "Đăng ký tài khoản thành công.";
-			echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='javascript: history.go(-1)'>Trở lại</a>";
+			echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=logincontroller&action=login'>Đăng nhập</a>";
 			exit;	
 } catch (Exception $e) {
     echo "Không gửi được email. email lỗi: {$mail->ErrorInfo}";

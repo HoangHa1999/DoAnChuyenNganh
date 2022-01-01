@@ -64,13 +64,7 @@ $ngd=new nguoidungmodel();
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.php" class="nav-link">Trang Chủ</a></li>
-	          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Tin Tức</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown03">
-              	
-				<a class="dropdown-item" href="index.php?controller=blogcontroller&action=blog">Tin Tức</a>
-				
-              </div>
+	         
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Sản Phẩm</a>
               <div class="dropdown-menu" aria-labelledby="dropdown02">
@@ -79,15 +73,24 @@ $ngd=new nguoidungmodel();
                 
               </div>
           	</li>
+			  <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Tin Tức</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+				<a class="dropdown-item" href="index.php?controller=blogcontroller&action=blog">Trà</a>
+				<a class="dropdown-item" href="index.php?controller=blogcontroller&action=blog1">Cà Phê</a>
+              </div>
+			  </li>
 	          <li class="nav-item"><a href="index.php?controller=aboutcontroller&action=about" class="nav-link">Giới Thiệu</a></li>
 	          <li class="nav-item"><a href="index.php?controller=contactcontroller&action=contact" class="nav-link">Liên Hệ</a></li>
 	        </ul>
 	      </div>
 	    </div>
 		<div class="order-lg-last btn-group">
-       	  	<form action="index.php" class="search-form">
+       	  	<form action="index.php" class="search-form" method="get">
+       	  		<input type="hidden" name='controller' value='sanphamcontroller'>
+                <input type="hidden" name='action' value='search'>
                 <input type="text" class="form-control" placeholder="Tìm kiếm" name='kw'>
-                <span class="fa fa-search" type="submit"></span>
+                <span class="fa fa-search" ></span>
               </form>
-       	  </div>
+       	</div>
 	  </nav>

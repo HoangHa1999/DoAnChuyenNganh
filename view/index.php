@@ -96,15 +96,15 @@
           for($i =0;$i <count($arrayten);$i++){
          echo '<div class="col-lg-6 d-flex align-items-stretch ftco-animate">';
          echo '   <div class="blog-entry d-md-flex">';
-         echo '     <a href="#" class="block-20 img" style="background-image: url(view/images/'.$arrayhinh[$i].');">';
-         echo '      </a>';
+         echo '     <span class="block-20 img" style="background-image: url(view/images/'.$arrayhinh[$i].');">';
+         echo '      </span>';
          echo '     <div class="text p-4 bg-light">';
          echo '       <div class="meta">';
          echo '         <p><span class="fa fa-calendar"></span>'.$arrayngay[$i].' </p>';
          echo '       </div>';
-         echo '        <h3 class="heading mb-3"><a href="#">'.$arrayten[$i].'</a></h3>';
+         echo '        <h3 class="heading mb-3">'.$arrayten[$i].'</h3>';
          echo '       <p>'.$arrayblog[$i].'</p>';
-         echo '       <a href="#" class="btn-custom"> Xem chi tiết <span class="fa fa-long-arrow-right"></span></a>';
+        
          echo '      </div>';
          echo '     </div>';
          echo '   </div>';

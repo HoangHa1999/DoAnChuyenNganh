@@ -8,8 +8,8 @@ class sanphammodel extends Db
 
     function search($kw)
     {
-      $sql="SELECT * FROM sanpham where tensanpham like ?";
-      $arr=["%kw%"];
+      $sql="SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm where tensanpham like ?";
+      $arr=["%$kw%"];
       return $this->selectQuery($sql, $arr);
     }
 

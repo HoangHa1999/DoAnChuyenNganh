@@ -47,7 +47,7 @@
                         Thêm Đơn Hàng</a>
                         
                         </div>
-                        <div class="card-body">
+                        <div class="table-responsive">
                             <table class="table table-striped" id="table1">
                                 <thead>
                                     <tr>
@@ -60,6 +60,7 @@
                                         <th>Thành tiền</th>
                                         <th>Trạng thái thanh toán</th>
                                         <th>Hình thức thanh toán</th>
+                                        <th>Xem chi tiết</th>
                                         <th>Hành động</th>
                                     </tr>
                                 </thead>
@@ -104,6 +105,17 @@
                                         echo'<td>'.$hinhthucthanhtoan.'</td>
                                         <td>
                                             <div class="form-button-action">
+                                                <a href="donhangchitiet.php?id='.$value['id_dh'].'" type="submit" data-toggle="tooltip" title="" class="btn btn-primary btn-round ml-auto" data-original-title="Edit Task">
+                                                    <svg class="bi" width="1em" height="1em" fill="currentColor">
+                                                       <use
+                                                    xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#info-circle-fill" />
+                                                    </svg>
+                                                    Chi tiết
+                                                </a>
+                                                </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-button-action">
                                                 <a href="donhangeditpage.php?id='.$value['id_dh'].'" type="submit" data-toggle="tooltip" title="" class="btn btn-primary btn-round ml-auto" data-original-title="Edit Task">
                                                     <svg class="bi" width="1em" height="1em" fill="currentColor">
                                                        <use
@@ -111,10 +123,7 @@
                                                     </svg>
                                                     Sửa
                                                 </a>
-                                                </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-button-action">
+                                               
                                                 <a href="donhangdeletepage.php?id='.$value['id_dh'].'" type="submit" data-toggle="tooltip" title="" class="btn btn-primary btn-round ml-auto" data-original-title="Remove">
                                                      <svg class="bi" width="1em" height="1em" fill="currentColor">
                                                       <use

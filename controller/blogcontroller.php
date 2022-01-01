@@ -10,7 +10,12 @@ if($action=='index')
 
 if($action=='blog')
 {
-    include './view/blog.php';
+    include './view/blog-single.php';
+}
+
+if($action=='blog1')
+{
+    include './view/blog-single1.php';
 }
 
 

@@ -36,7 +36,7 @@ if ($action=='search')
 {
     $kw = isset($_GET['kw'])?$_GET['kw']:'';
     $data =$sp->search($kw);
-    include './view/index.php';
+    include './view/search.php';
 }
 
 

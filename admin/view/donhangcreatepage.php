@@ -119,7 +119,7 @@
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
-                                                                <input type="date" class="form-control"
+                                                                <input type="datetime-local" class="form-control"
                                                                     placeholder="Ngày lập" name="ngaylap" required="required">
                                                                 
                                                             </div>

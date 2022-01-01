@@ -58,7 +58,7 @@
 							echo '			</label>';
 						    echo '	</td>';
 						    echo '	<td>';
-						    echo '		<div class="img" style="background-image: url(admin/view/assets/images/faces/'.$value['hinh'].');"></div>';
+						    echo '		<a href="index.php?controller=sanphamcontroller&action=productdetail&id='.$value['id_sp'].'"><div class="img" style="background-image: url(admin/view/assets/images/faces/'.$value['hinh'].');"></div></a>';
 						    echo '	</td>';
 						    echo '  <td>';
 						    echo '  	<div class="email">';

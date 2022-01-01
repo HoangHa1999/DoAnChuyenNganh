@@ -76,7 +76,7 @@ if(empty($_SESSION["username"])){
                         
                        <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-collection-fill"></i>
+                                <i class="bi bi-person-lines-fill"></i>
                                 <span> Quản lý người dùng</span>
                             </a>
                             <ul class="submenu ">
@@ -90,7 +90,7 @@ if(empty($_SESSION["username"])){
                         </li>
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-collection-fill"></i>
+                                <i class="bi bi-suit-club-fill"></i>
                                 <span>Quản lý sản phẩm</span>
                             </a>
                             <ul class="submenu ">
@@ -104,7 +104,7 @@ if(empty($_SESSION["username"])){
                         </li>
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-collection-fill"></i>
+                                <i class="bi bi-cart-check-fill"></i>
                                 <span>Quản lý đơn hàng</span>
                             </a>
                             <ul class="submenu ">
@@ -118,7 +118,7 @@ if(empty($_SESSION["username"])){
                         </li>
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
-                                <i class="bi bi-collection-fill"></i>
+                                <i class="bi bi-card-heading"></i>
                                 <span>Quản lý bài viết</span>
                             </a>
                             <ul class="submenu ">

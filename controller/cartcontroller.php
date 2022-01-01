@@ -119,6 +119,8 @@ if(!isset($_SESSION["cart"]))
 	$nguoidung = $ngd->nguoidungcoma($_SESSION["idnguoidung"]);
 	$email = $nguoidung[0]['email'];
 	$ten = $nguoidung[0]['tennguoidung'];
+	$sdt = $nguoidung[0]['sdt'];
+	$diachi = $nguoidung[0]['diachi'];
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -144,7 +146,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Đặt hàng thành công';
-    $mail->Body    = '<b>Thông tin đặt hàng</b>'.$content.'<span><b>Thành tiền (giảm giá 10%): </b></span><span>'.chuyentien($tongtien-$tongtien*0.1).'</span><br><b>Cảm ơn bạn đã mua hàng</b>';
+    $mail->Body    = '<b>Thông tin đặt hàng</b><br><b>Tên người nhận: </b>'.$ten.'<br><b>Địa chỉ: </b>'.$diachi.'<br><b>SĐT: </b>'.$sdt.$content.'<span><b>Thành tiền (giảm giá 10%): </b></span><span>'.chuyentien($tongtien-$tongtien*0.1).'</span><br><b>Cảm ơn bạn đã mua hàng</b>';
     
 
     $mail->send();
