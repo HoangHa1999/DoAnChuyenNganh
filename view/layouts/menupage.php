@@ -35,8 +35,15 @@ $ngd=new nguoidungmodel();
 					}else{
 				?>
 					<p class="mb-0">
-					<font color="white">Xin chào <?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?> </font>&nbsp;/&nbsp;
-						<a href="index.php?controller=logincontroller&action=logout">Đăng xuất</a>
+					<ul class="navbar-nav ml-auto">	
+         <a class="nav-link dropdown-toggle" id="dropdown03" data-toggle="dropdown"><font color="white"><span>Xin chào </span><?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?></a></font>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+			  <a class="dropdown-item" href="index.php?controller=changecontroller&action=changepass"> Đổi mật khẩu</a>  
+			  </ul>
+              </div>
+					</p>
+					<p class="mb-0">
+					<a class="dropdown-item" href="index.php?controller=logincontroller&action=logout"><font color="white">Đăng xuất</font></a>
 					</p>
 				<?php
 					}
@@ -64,22 +71,8 @@ $ngd=new nguoidungmodel();
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.php" class="nav-link">Trang Chủ</a></li>
-	         
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Sản Phẩm</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown02">
-              	
-                <a class="dropdown-item" href="index.php?controller=sanphamcontroller&action=product">Danh Sách Sản Phẩm</a>
-                
-              </div>
-          	</li>
-			  <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh Mục Tin Tức</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown03">
-				<a class="dropdown-item" href="index.php?controller=blogcontroller&action=blog">Trà</a>
-				<a class="dropdown-item" href="index.php?controller=blogcontroller&action=blog1">Cà Phê</a>
-              </div>
-			  </li>
+			  <li class="nav-item"><a href="index.php?controller=blogcontroller&action=blog" class="nav-link">Tin Tức</a></li>
+			  <li class="nav-item"><a href="index.php?controller=sanphamcontroller&action=product" class="nav-link">Sản Phẩm</a></li>
 	          <li class="nav-item"><a href="index.php?controller=aboutcontroller&action=about" class="nav-link">Giới Thiệu</a></li>
 	          <li class="nav-item"><a href="index.php?controller=contactcontroller&action=contact" class="nav-link">Liên Hệ</a></li>
 	        </ul>

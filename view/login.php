@@ -48,7 +48,7 @@
 					    <div class="submitting"></div>
 					</div>
 	            </div>
-              <p><a href="index.php?controller=forgotcontroller&action=forgotpass"> Quên mật khẩu </a>&emsp;/&emsp;<a href="index.php?controller=changecontroller&action=changepass"> Đổi mật khẩu </a></p>
+              <p><a href="index.php?controller=forgotcontroller&action=forgotpass"> Quên mật khẩu </a></p>
              
 	          </form><!-- END -->
 

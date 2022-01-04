@@ -69,8 +69,12 @@
                                         }
                                         $conn= new MySQLUtils();
                                         $conn->connectDB();
-                                        $sql = "SELECT * FROM chitietdonhang join sanpham on chitietdonhang.id_sp = sanpham.id_sp";
-                                        $result = $conn->selectQuery($sql);
+                                        if(isset($_GET["id"]))
+                                        {
+                                            $id_dh = $_GET["id"];
+                                            $sql = "SELECT * FROM chitietdonhang join sanpham on chitietdonhang.id_sp = sanpham.id_sp WHERE id_dh = '$id_dh'";
+                                            $result = $conn->selectQuery($sql);
+                                        }
                                       
                                     $stt =0;
                                     foreach($result as $value){

@@ -41,12 +41,7 @@ return false;
 						<form name="f1" action="index.php?controller=changecontroller&action=submit" onsubmit="return matchpass()" method="POST" class="billing-form">
 							<h3 class="mb-4 billing-heading">Đổi Mật Khẩu</h3>
 	          	<div class="row align-items-end">
-	          		<div class="col-md-12">
-	                <div class="form-group">
-	                	<label for="emailaddress">Email</label>
-	                  <input type="email" name="txt_email" class="form-control"  required="required">
-	                </div>
-	              </div>
+	          		
                 <div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="lastname">Mật Khẩu Cũ</label>
@@ -61,7 +56,7 @@ return false;
                 </div>
                 <div class="col-md-12">
 	                <div class="form-group">
-	                	<label for="lastname">Nhập Lại Mật Khẩu</label>
+	                	<label for="lastname">Nhập Lại Mật Khẩu Mới</label>
                         <input type="password" name="txt_Repassword" id="txt_Repassword" class="form-control" required data-error="Vui lòng nhập password.">
 	                </div>
                 </div>

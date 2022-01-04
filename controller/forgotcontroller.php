@@ -1,4 +1,9 @@
 <?php
+if(!isset($_SESSION))
+{
+    session_start();               
+}
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -28,11 +33,12 @@ if($action=='submit')
 		echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=registercontroller&action=register'>Đăng Ký</a>";	
 		exit;
 	}
-	$pw = rand_string(7);
+	$maxacthuc = rand_string(7);
 
-    $content = "<b>Mật khẩu của quý khách là: </b><span>".$pw."</span><br>Không cung cấp mật khẩu cho bất kỳ ai!!!";
-    $pw = md5($pw);
-    $data = $ngd->capnhatpass($email, $pw);
+    $content = "<b>Mã xác thực của quý khách là: </b><span>".$maxacthuc."</span><br>Không cung cấp mã xác thực cho bất kỳ ai!!!";
+    
+    $_SESSION["email"]= $email;
+    $data = $ngd->capnhatmaxacthuc($email, $maxacthuc);
     
 
     require('mail/PHPMailer/Exception.php');
@@ -69,8 +75,8 @@ try {
 
     $mail->send();
     //echo 'Gửi email thành công';
-	$message = "Chúng tôi đã gửi password cho bạn. Vui lòng kiểm tra email !";
-					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=logincontroller&action=login'>Đăng nhập</a>";
+	$message = "Chúng tôi đã gửi mã xác thực cho bạn. Vui lòng kiểm tra email !";
+					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=xacthuccontroller&action=xacthuc'>Nhập mã xác thực</a>";
 					exit;
 } catch (Exception $e) {
     echo "Không gửi được email. email lỗi: {$mail->ErrorInfo}";

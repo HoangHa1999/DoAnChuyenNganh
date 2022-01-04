@@ -102,11 +102,11 @@ if(!isset($_SESSION["cart"]))
 
 						$stt=0;
 						$content ="<table width='500' border = '1'>";
-						$content .="<tr><th>STT</th><th>Sản Phẩm</th><th>Giá Tiền</th><th>Số Lượng</th><th>Tổng Tiền</th></tr>";
+						$content .="<tr><th>STT</th><th>Hình</th><th>Sản Phẩm</th><th>Giá Tiền</th><th>Số Lượng</th><th>Tổng Tiền</th></tr>";
 						foreach($data as $value)
 						{
 							$stt++;
-							$content .="<tr><td>".$stt."</td><td>".$value['tensanpham']."</td><td>".chuyentien($value['gia'])."</td><td>".$_POST['quantity'][$value['id_sp']]."</td><td>".chuyentien($value['gia']*$_POST['quantity'][$value['id_sp']])."</td></tr>";
+							$content .="<tr><td>".$stt.'</td><td><img src="http://thcoffee.xyz/admin/view/assets/images/faces/'.$value['hinh'].'" style="width:50px;height:50px;"></td><td>'.$value['tensanpham']."</td><td>".chuyentien($value['gia'])."</td><td>".$_POST['quantity'][$value['id_sp']]."</td><td>".chuyentien($value['gia']*$_POST['quantity'][$value['id_sp']])."</td></tr>";
 						}
 						$content .="</table>";
 				
@@ -146,7 +146,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Đặt hàng thành công';
-    $mail->Body    = '<b>Thông tin đặt hàng</b><br><b>Tên người nhận: </b>'.$ten.'<br><b>Địa chỉ: </b>'.$diachi.'<br><b>SĐT: </b>'.$sdt.$content.'<span><b>Thành tiền (giảm giá 10%): </b></span><span>'.chuyentien($tongtien-$tongtien*0.1).'</span><br><b>Cảm ơn bạn đã mua hàng</b>';
+    $mail->Body    = '<b>Thông tin đặt hàng</b><br><b>Ngày đặt: </b>'.date("d/m/Y").'<br><b>Giờ đặt: </b>'.date("H:i:s").'<br><b>Tên người nhận: </b>'.$ten.'<br><b>Địa chỉ: </b>'.$diachi.'<br><b>SĐT: </b>'.$sdt.$content.'<span><b>Thành tiền (giảm giá 10%): </b></span><span>'.chuyentien($tongtien-$tongtien*0.1).'</span><br><b>Cảm ơn bạn đã mua hàng</b>';
     
 
     $mail->send();

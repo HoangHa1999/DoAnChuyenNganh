@@ -37,7 +37,7 @@
                 <div class="w-100"></div>
                 <div class="col-md-12">
                     <div class="form-group">
-					<button type="submit" name ="btngui" class="btn btn-primary">Gửi Mail</button>
+					<button type="submit" name ="btngui" class="btn btn-primary">Gửi mã xác thực</button>
 					    <div class="submitting"></div>
 					</div>
 	            </div>

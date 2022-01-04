@@ -87,28 +87,29 @@
           </div>
         </div>
         <div class="row d-flex">
-          <?php 
-          $arrayten =array("Truyền thuyết về quả cà phê","Th - Coffee địa điểm check in của giới trẻ","Top 10 quán cafe dành cho cặp đôi");
-          $arrayblog =array("Có rất nhiều truyền thuyết về nguồn gốc của cà phê. Tuy nhiên, câu chuyện người đàn ông chăn dê tên Kaldi phát hiện ra cây cà phê ở khu rừng cổ của cao nguyên Ethiopia là phổ biến và được nhiều người tin nhất. ","TH - Coffee một trong những địa điểm check in đáng để thử dành cho giới trẻ với những góc view bắt mắt,....","Những quán cafe có view đẹp góc chụp hình sang chảnh, lãng mạn dành cho các cặp đôi đi chơi check in vào mùa noel,...");
-          $arrayngay =array("Tháng 12,2022","Tháng 9,2021","Tháng 5,2018 ");
-          
-          $arrayhinh =array("blog1.jpg","image_1.jpg","image_2.jpg");
-          for($i =0;$i <count($arrayten);$i++){
-         echo '<div class="col-lg-6 d-flex align-items-stretch ftco-animate">';
-         echo '   <div class="blog-entry d-md-flex">';
-         echo '     <span class="block-20 img" style="background-image: url(view/images/'.$arrayhinh[$i].');">';
-         echo '      </span>';
-         echo '     <div class="text p-4 bg-light">';
-         echo '       <div class="meta">';
-         echo '         <p><span class="fa fa-calendar"></span>'.$arrayngay[$i].' </p>';
-         echo '       </div>';
-         echo '        <h3 class="heading mb-3">'.$arrayten[$i].'</h3>';
-         echo '       <p>'.$arrayblog[$i].'</p>';
-        
-         echo '      </div>';
-         echo '     </div>';
-         echo '   </div>';
-        }
+         <?php 
+            $arrayten =array("Thái Nguyên - Đệ Nhất Danh Trà ","Chuỗi cà phê được đánh giá");
+            $arrayngay =array("September 9,2021","January 5,2021 ");
+            $arraymota =array("Nhắc đến trà đầu tiên phải nhắc đến vùng đất Thái Nguyên. Nơi đây nổi tiếng với những nương trà xanh mát, bao la và bất tận,...","Nhiều nghiên cứu đã chỉ ra rằng việc uống cà phê thường xuyên sẽ rất có lợi cho cơ thể. Nó giúp bạn giảm nguy cơ mắc các bệnh nguy hiểm như: Alzheimer, Parkinson,...");
+            $arraybtn = array("Xem chi tiết","Xem chi tiết");
+            $arraychitiet = array("index.php?controller=blogcontroller&action=blogdetail","index.php?controller=blogcontroller&action=blogdetail1");
+            $arrayhinh =array("image_tra.jpg","image_phacaphe.jpg");
+            for($i =0;$i <count($arrayten);$i++){
+           echo '<div class="col-lg-6 d-flex align-items-stretch ftco-animate">';
+           echo '   <div class="blog-entry d-md-flex">';
+           echo '     <div class="block-20 img" style="background-image: url(view/images/'.$arrayhinh[$i].');">';
+           echo '      </div>';
+           echo '     <div class="text p-4 bg-light">';
+           echo '       <div class="meta">';
+           echo '         <p><span class="fa fa-calendar"></span>'.$arrayngay[$i].' </p>';
+           echo '       </div>';
+           echo '        <h3 class="heading mb-3">'.$arrayten[$i].'</h3>';
+           echo '       <p>'.$arraymota[$i].'</p>';
+           echo '       <a href="'.$arraychitiet[$i].'" class="btn-custom">'.$arraybtn[$i].' <span class="fa fa-long-arrow-right"></span></a>';
+           echo '      </div>';
+           echo '     </div>';
+           echo '   </div>';
+          }
           ?>
         </div>
       </div>

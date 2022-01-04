@@ -45,4 +45,8 @@ $c = isset($_GET['controller'])?$_GET['controller']:'trangchu';
                 {
                     include './controller/changecontroller.php';
                 }
+                if ($c=='xacthuccontroller')
+                {
+                    include './controller/xacthuccontroller.php';
+                }
 ?>

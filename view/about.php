@@ -35,17 +35,20 @@
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel ftco-owl">
             <?php
-            for($i =1;$i <5;$i++){
+            $arrayuser =array("Thịnh","Hà","Quang");
+            
+            $arraycmt =array("Quán có view đẹp nhân viên thân thiện, wifi mạnh tui rất thích không gian quán này rất phù hợp với tôi.","Quán trang trọng lịch sự thoáng mát, đồ uống rất ngon, tôi cũng thường hay hẹn gặp đối tác ở đây.","Quán đẹp rộng thoãi mái, đồ uống thì quá ngon, nhân viên lịch sự tôi sẽ còn quay lại ủng hộ.");
+            for($i =0;$i <3;$i++){
             echo '<div class="item">';
             echo '      <div class="testimony-wrap py-4">';
             echo '        <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>';
             echo '        <div class="text">';
-            echo '          <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>';
+            echo '          <p class="mb-4">'.$arraycmt[$i].'</p>';
             echo '          <div class="d-flex align-items-center">';
             echo '            <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>';
             echo '           <div class="pl-3">';
-            echo '              <p class="name">Roger Scott</p>';
-            echo '              <span class="position">Marketing Manager</span>';
+            echo '              <p class="name">'.$arrayuser[$i].'</p>';
+           
             echo '            </div>';
             echo '          </div>';
             echo '        </div>';
@@ -64,8 +67,8 @@
     	<div class="container">
     		<div class="row">
           <?php
-          $arraydatanumber = array("3000","115","100","40");
-          $arrayname = array("Our Satisfied Customers","Years of Experience","Kinds of Liquor","Our Branches");
+          $arraydatanumber = array("30000","15","30","9");
+          $arrayname = array("Khách hàng đã mua","Kinh nghiệm trong kinh doanh","Loại Công Thức","Tổng điểm đánh giá từ khách hàng");
           for($i =0;$i <count($arrayname);$i++){
           echo '<div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">';
           echo '  <div class="block-18 py-4 mb-4">';

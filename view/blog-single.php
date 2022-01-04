@@ -12,8 +12,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate mb-5 text-center">
-          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Trang chủ <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2"></span> <span>Tin Tức <i class="fa fa-chevron-right"></i></span></p>
-            <h2 class="mb-0 bread">Tin Tức</h2>
+          <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.php">Trang chủ <i class="fa fa-chevron-right"></i></a></span> <span class="mr-2"><a href="index.php?controller=blogcontroller&action=blog">Tin Tức <i class="fa fa-chevron-right"></i></a></span> <span>Chi Tiết Tin Tức <i class="fa fa-chevron-right"></i></span></p>
+            <h2 class="mb-0 bread">Chi Tiết Tin Tức</h2>
           </div>
         </div>
       </div>
