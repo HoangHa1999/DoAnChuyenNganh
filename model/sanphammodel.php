@@ -1,6 +1,22 @@
 <?php
 class sanphammodel extends Db
 {
+    protected $_numPage=0;
+    function numPage()
+    {
+        return $this->_numPage;
+    }
+    function alltheotrang($current_page=1)
+    {
+      $item_per_page= PAGE_SIZE;
+      $offset = ($current_page-1) *$item_per_page;
+      $sql='select Count(*) as dem from sanpham ';
+      $data = $this->selectQuery($sql);
+      $n = $data[0]['dem'];
+      $this->_numPage= ceil($n/PAGE_SIZE);
+     return $this->selectQuery("SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm ORDER BY danhmuc.id_dm limit $offset, $item_per_page");
+    }
+
     function all()
     {
      return $this->selectQuery('SELECT * FROM sanpham join danhmuc on sanpham.id_danhmuc = danhmuc.id_dm ORDER BY danhmuc.id_dm');

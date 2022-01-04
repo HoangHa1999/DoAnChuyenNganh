@@ -63,9 +63,55 @@
 					</div>
       <?php
 				}
-			?>
-					</div>
-					
+			?>  
+		</div> 
+    <div class="row mt-5">
+		          <div class="col text-center">
+		            <div class="block-27">
+		              <ul>
+                    <?php
+                    if ($current_page > 3) {
+                      $first_page = 1;
+                      ?>
+		                <li><a href="?page=<?= $first_page ?>">First</a></li>
+                    <?php
+                    }
+                    if ($current_page > 1) {
+                        $prev_page = $current_page - 1;
+                      ?>
+                       <li><a href="?page=<?= $prev_page ?>">&lt;</a></li>
+                       <?php 
+                       }
+                       for ($num = 1; $num <= $totalPages; $num++) {
+                         if ($num != $current_page) { 
+                             if ($num > $current_page - 3 && $num < $current_page + 3) {
+                  ?>
+		                <li><a href="?page=<?= $num ?>"><?= $num ?></a></li>
+                    <?php
+                        }
+                      }else{ ?>
+                    <li class="active"><span><?= $num ?></span></li>
+                    <?php
+                      }
+                    }
+                    if ($current_page < $totalPages - 1) {
+                      $next_page = $current_page + 1; 
+                    ?>
+		                <li><a href="?page=<?= $next_page ?>">&gt;</a></li>
+                    <?php
+                    }
+                    if ($current_page < $totalPages - 3) {
+                      $end_page = $totalPages;
+                    ?>
+                    <li><a href="?page=<?= $end_page ?>">Last</a></li>
+                    <?php
+                    }
+                    ?>
+		              </ul>
+		            </div>
+		          </div>
+		        </div>
+				<br><br>	
 				<div class="row justify-content-center">
 					<div class="col-md-4">
 						<a href="index.php?controller=sanphamcontroller&action=product" class="btn btn-primary d-block">Tất cả sản phẩm <span class="fa fa-long-arrow-right"></span></a>

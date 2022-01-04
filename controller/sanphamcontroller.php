@@ -4,7 +4,9 @@ $sp=new sanphammodel();
 $dm=new danhmucmodel();
 if($action=='index')
 {
-	$data=$sp->all();
+    $current_page = !empty($_GET['page'])?$_GET['page']:1;
+    $data=$sp->alltheotrang($current_page);
+    $totalPages= $sp->numPage();
 	include './view/index.php';
 }
 
