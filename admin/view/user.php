@@ -50,7 +50,6 @@
                                         <th>Tên</th>
                                         <th>Giới tính</th>
                                         <th>Email</th>
-                                        <th>Password</th>
                                         <th>Số Điện Thoại</th>
                                         <th>Địa Chỉ</th>
                                         <th>Hoạt Động</th>
@@ -87,7 +86,6 @@
                                         echo    '<td>'.$value['tennguoidung'].'</td>';
                                         echo    '<td>'.$gioitinh.'</td>';
                                         echo    '<td>'.$value['email'].'</td>';
-                                        echo    '<td>'.$value['password'].'</td>';
                                         echo    '<td>'.$value['sdt'].'</td>';
                                         echo    '<td>'.$value['diachi'].'</td>';
                                         echo'<td>';

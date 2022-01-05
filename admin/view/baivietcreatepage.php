@@ -137,7 +137,7 @@
                                                             <div class="position-relative">
                                                             <select class="form-select" aria-label="Default select example" name="idnguoiviet" id="idnguoiviet">
                                                             <?php
-                                                            $sql = "SELECT * FROM nguoidung WHERE admin = '0'";
+                                                            $sql = "SELECT * FROM nguoidung WHERE admin = '1'";
                                                             $result = $conn->selectQuery($sql);
 
                                                             foreach($result as $value)
@@ -156,9 +156,9 @@
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
-                                                            <textarea class="form-control" name="ndbaiviet" rows="4" cols="50">
-  
-                                                            </textarea>
+                                                            <script src="../../ckeditor/ckeditor.js"></script>
+                                                            <textarea name="ndbaiviet"></textarea>
+                                                                <script type="text/javascript">CKEDITOR.replace('ndbaiviet');</script>    
                                                             </div>
                                                         </div>
                                                     </div>

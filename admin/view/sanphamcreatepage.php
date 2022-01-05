@@ -75,17 +75,18 @@
                                                 exit;
                                             }
                                         }
-                                        if(isset($_POST["id_sp"]) && isset($_POST["tensanpham"])&& isset($_POST["id_dm"])&& isset($_POST["gia"])&& isset($_FILES["file_upload"]))
+                                        if(isset($_POST["id_sp"]) && isset($_POST["tensanpham"]) && isset($_POST["thongtin"]) && isset($_POST["id_dm"])&& isset($_POST["gia"])&& isset($_FILES["file_upload"]))
                                         {
                                            
                                             $id_sp = $_POST["id_sp"];
                                             $tensanpham = $_POST["tensanpham"];
                                             $id_dm = $_POST["id_dm"];
                                             $gia = $_POST["gia"];
+                                            $thongtin = $_POST["thongtin"];
                                             $hinh = $_FILES['file_upload']['name'][0];
                                            
 
-                                            $sql = "INSERT INTO sanpham VALUES('$id_sp', '$hinh' ,'$tensanpham', '$gia', '$id_dm')";
+                                            $sql = "INSERT INTO sanpham VALUES('$id_sp', '$hinh' ,'$tensanpham', '$thongtin', '$gia', '$id_dm')";
                                             $conn->updateQuery($sql);
                                             ?>
 				<script>
@@ -112,7 +113,7 @@
                                                     </div>
 
                                                     <div class="col-md-4">
-                                                        <label>Tên Sản Phẩm</label>
+                                                        <label>Tên Sản Phẩm:</label>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
@@ -120,6 +121,18 @@
                                                                 <input type="text" class="form-control"
                                                                     placeholder="Tên sản phẩm" name="tensanpham" required="required">
                                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Thông Tin:</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group has-icon-left">
+                                                            <div class="position-relative">
+                                                            <script src="../../ckeditor/ckeditor.js"></script>
+                                                            <textarea name="thongtin"></textarea>
+                                                                <script type="text/javascript">CKEDITOR.replace('thongtin');</script>    
                                                             </div>
                                                         </div>
                                                     </div>

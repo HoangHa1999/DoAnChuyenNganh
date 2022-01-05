@@ -86,16 +86,17 @@
                                             }
                                         }
 
-                                        if(isset($_POST["id_sp"]) && isset($_POST["tensanpham"])&& isset($_POST["id_dm"])&& isset($_POST["gia"])&& isset($_FILES["file_upload"]))
+                                        if(isset($_POST["id_sp"]) && isset($_POST["tensanpham"]) && isset($_POST["thongtin"]) && isset($_POST["id_dm"])&& isset($_POST["gia"])&& isset($_FILES["file_upload"]))
                                         {
                                             $id = $_POST["id_sp"];
                                             $tensanpham = $_POST["tensanpham"];
                                             $id_dm = $_POST["id_dm"];
                                             $gia = $_POST["gia"];
+                                            $thongtin = $_POST["thongtin"];
                                             $hinh = $_FILES['file_upload']['name'][0];
                                            
 
-                                            $sql = "UPDATE sanpham SET id_sp = '$id',hinh = '$hinh' ,tensanpham = '$tensanpham',gia = '$gia',id_danhmuc = '$id_dm' WHERE id_sp='$id_sp'";
+                                            $sql = "UPDATE sanpham SET id_sp = '$id',hinh = '$hinh' ,tensanpham = '$tensanpham' ,thongtin = '$thongtin' ,gia = '$gia',id_danhmuc = '$id_dm' WHERE id_sp='$id_sp'";
                                             $conn->updateQuery($sql);
                                             ?>
                                             <script>
@@ -130,6 +131,18 @@
                                                                 <input type="text" class="form-control"
                                                                     placeholder="Tên sản phẩm" name="tensanpham" value = "<?php echo $result[0]['tensanpham'] ?>">
                                                                 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Thông Tin:</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group has-icon-left">
+                                                            <div class="position-relative">
+                                                            <script src="../../ckeditor/ckeditor.js"></script>
+                                                            <textarea name="thongtin"> <?php echo $result[0]['thongtin'] ?></textarea>
+                                                                <script type="text/javascript">CKEDITOR.replace('thongtin');</script>    
                                                             </div>
                                                         </div>
                                                     </div>

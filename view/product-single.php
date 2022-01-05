@@ -70,8 +70,28 @@
     			</div>
 				<button type="submit" value="themsp" class="btn btn-primary"> Thêm vào giỏ hàng </button>
 		</form>
+		
     		</div>
+			<div class="row mt-5">
+          <div class="col-md-12 nav-link-wrap">
+            <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+			<div class="alert alert-dark" role="alert">Thông tin</div>
+
+            </div>
+          </div>
+          <div class="col-md-12 tab-wrap">
+            
+            <div class="tab-content bg-light" id="v-pills-tabContent">
+
+              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
+              	<div class="p-4">
+	              	
+	              <?php  echo $data[0]['thongtin']?>
+              	</div>
+              </div>
+
     	</div>
+		</div>
     </section>
 
 	<footer class="ftco-footer">

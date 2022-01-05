@@ -167,9 +167,9 @@
                                                     <div class="col-md-8">
                                                         <div class="form-group has-icon-left">
                                                             <div class="position-relative">
-                                                            <textarea class="form-control" name="ndbaiviet" rows="4" cols="50" >
-                                                                <?php echo $result[0]['noidung'] ?>
-                                                            </textarea>
+                                                            <script src="../../ckeditor/ckeditor.js"></script>
+                                                                <textarea name="ndbaiviet"><?php echo $result[0]['noidung'] ?></textarea>
+                                                                    <script type="text/javascript">CKEDITOR.replace('ndbaiviet');</script>
                                                             </div>
                                                         </div>
                                                     </div>
