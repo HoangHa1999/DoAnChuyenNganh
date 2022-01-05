@@ -30,7 +30,7 @@
         </div>
         <div class="row d-flex">
         <?php 
-            $arrayten =array("Thái Nguyên - Đệ Nhất Danh Trà ","Chuỗi cà phê được đánh giá");
+            $arrayten =array("Thái Nguyên - Đệ Nhất Danh Trà ","Thời Điểm Vàng Để Uống Cà Phê");
             $arrayngay =array("September 9,2021","January 5,2021 ");
             $arraymota =array("Nhắc đến trà đầu tiên phải nhắc đến vùng đất Thái Nguyên. Nơi đây nổi tiếng với những nương trà xanh mát, bao la và bất tận,...","Nhiều nghiên cứu đã chỉ ra rằng việc uống cà phê thường xuyên sẽ rất có lợi cho cơ thể. Nó giúp bạn giảm nguy cơ mắc các bệnh nguy hiểm như: Alzheimer, Parkinson,...");
             $arraybtn = array("Xem chi tiết","Xem chi tiết");

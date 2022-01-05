@@ -74,17 +74,16 @@ if(!isset($_SESSION["cart"]))
 				}else if(isset($_POST['btnthanhtoan'])){
 
 					if(!empty($_POST['quantity'])){
-						if(isset($_SESSION["idnguoidung"]))
-	{
-						$tongtien = 0;
 						$data=$sp->sptrongcart();
-						
-						
+						if(isset($_SESSION["idnguoidung"]))
+						{
+						if(!empty($_SESSION["cart"])){
+						$tongtien = 0;
+
 						foreach($data as $value)
 						{
 							$tongtien += $value['gia']*$_POST['quantity'][$value['id_sp']]; 
 						}
-						
 						
 						$nguoidung = $ngd->nguoidungcoma($_SESSION["idnguoidung"]);						
 						$id_dh = "dh".rand(10,99);						
@@ -95,6 +94,8 @@ if(!isset($_SESSION["cart"]))
 						
 						$dhngd =$dh->insert($id_dh, $giogiao, $noigiao, $thanhtien,'0','0', $id_nguoidung);
 						
+						if($dhngd){
+
 						foreach($data as $value)
 						{
 							$ctdhngd = $ctdh->insert($id_dh, $value['id_sp'], $value['gia'], $_POST['quantity'][$value['id_sp']]);
@@ -109,9 +110,11 @@ if(!isset($_SESSION["cart"]))
 							$content .="<tr><td>".$stt.'</td><td><img src="http://thcoffee.xyz/admin/view/assets/images/faces/'.$value['hinh'].'" style="width:50px;height:50px;"></td><td>'.$value['tensanpham']."</td><td>".chuyentien($value['gia'])."</td><td>".$_POST['quantity'][$value['id_sp']]."</td><td>".chuyentien($value['gia']*$_POST['quantity'][$value['id_sp']])."</td></tr>";
 						}
 						$content .="</table>";
-				
-					
-	
+
+						unset($_SESSION['cart']);
+						$alert = '<div class="alert alert-success" role="alert"> Đặt hàng thành công! </div>';
+						include './view/cart.php';
+
 	require('mail/PHPMailer/Exception.php');
 	require('mail/PHPMailer/SMTP.php');
 	require('mail/PHPMailer/PHPMailer.php');
@@ -150,22 +153,20 @@ try {
     
 
     $mail->send();
-	unset($_SESSION['cart']);
-    echo 'Mã thanh toán Momo';
-	?>
-					<img  src="view/images/qrcode.jpg" style="width:550px;height:500px;" >
-					<?php
-					$message = "Đặt hàng thành công.";
-					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php'>Tiếp tục mua hàng</a>";
-					exit;
+
 } catch (Exception $e) {
     echo "Không gửi được email. email lỗi: {$mail->ErrorInfo}";
 }
-
-					
+exit;
+						}else{
+							$alert = '<div class="alert alert-danger" role="alert"> Đặt hàng thất bại! </div>';
+							include './view/cart.php';
+							exit;
+						}
+					}	
 				}else{
-					$message = "Bạn chưa đăng nhập. Vui lòng đăng nhập để đặt hàng!";
-					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='javascript: history.go(-1)'>Trở lại</a>";
+					$alert = '<div class="alert alert-danger" role="alert"> Bạn chưa đăng nhập. Vui lòng đăng nhập để đặt hàng! </div>';
+					include './view/cart.php';
 					exit;
 				}
 			}

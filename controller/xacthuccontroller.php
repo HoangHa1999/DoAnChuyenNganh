@@ -28,14 +28,21 @@ if($action=='submit')
    
     if($nguoidung[0]['maxacthuc'] != $mxt)
     {
-        $message = "Mã xác thực không chính xác. Vui lòng kiểm tra lại!";
-		echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='javascript: history.go(-1)'>Trở lại</a>";	
+        $alert = '<div class="alert alert-danger" role="alert"> Mã xác thực không chính xác. Vui lòng kiểm tra lại! </div>';
+		include './view/xacthuc.php';
 		exit;
     }
   
     $data = $ngd->capnhatpass($email, $pw);
-	$message = "Cập nhật mật khẩu thành công!";
-					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=logincontroller&action=login'>Đăng nhập</a>";
-					exit;
+    if($data)
+	{
+        $alert = '<div class="alert alert-success" role="alert"> Cập nhật mật khẩu thành công! </div>';
+		include './view/xacthuc.php';
+		exit;
+    }else{
+        $alert = '<div class="alert alert-danger" role="alert"> Cập nhật mật khẩu thất bại! </div>';
+		include './view/xacthuc.php';
+		exit;
+    }
 }
 ?>

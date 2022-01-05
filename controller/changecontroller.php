@@ -28,17 +28,24 @@ if($action=='submit')
 	$email = $nguoidung[0]['email'];
    
 	if($ngd->nguoidungcopass($pwcu)<=0){
-		$message = "Mật khẩu không chính xác";
-		echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='javascript: history.go(-1)'>Trở lại</a>";	
+		$alert = '<div class="alert alert-danger" role="alert"> Mật khẩu không chính xác. </div>';
+		include './view/changepass.php';
 		exit;
+		
     }
     
     $pwmoi = md5($pwmoi);
     $data = $ngd->capnhatpass($email, $pwmoi);
-  
-	$message = "Đổi mật khẩu thành công!";
-					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php'>Quay lại trang chủ</a>";
-					exit;
 
+	if($data)
+	{
+		$alert = '<div class="alert alert-success" role="alert"> Đổi mật khẩu thành công!. </div>';
+		include './view/changepass.php';
+		exit;
+	}else{
+		$alert = '<div class="alert alert-danger" role="alert"> Đổi mật khẩu thất bại!. </div>';
+		include './view/changepass.php';
+		exit;
+	}
 }
 ?>

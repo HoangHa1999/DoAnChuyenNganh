@@ -25,6 +25,11 @@
           <div class="col-xl-10 ftco-animate">
 						<form  action="index.php?controller=logincontroller&action=submit" method="POST" class="billing-form">
 							<h3 class="mb-4 billing-heading">Thông Tin Đăng Nhập</h3>
+              <?php
+              if(isset($alert)){
+                echo $alert;
+              }
+              ?>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-12">
 	                <div class="form-group">

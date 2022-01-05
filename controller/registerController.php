@@ -32,14 +32,19 @@ if($action=='submit')
 	
 	
 	if($ngd->nguoidungcoemail($email)>0){
-		$message = "Tài khoản email đã tồn tại";
-		echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='javascript: history.go(-1)'>Trở lại</a>";	
+		$alert = '<div class="alert alert-danger" role="alert"> Tài khoản email đã tồn tại. </div>';
+		include './view/register.php';
 		exit;
 	}
 		
 	$data = $ngd->insert($id_ngd, $ten, $gt, $email, $pw, $sdt, $diachi);
+	
+	if($data)
+	{
+		$alert = '<div class="alert alert-success" role="alert"> Đăng ký tài khoản thành công. </div>';
+		include './view/register.php';
 
-	require('mail/PHPMailer/Exception.php');
+		require('mail/PHPMailer/Exception.php');
 	require('mail/PHPMailer/SMTP.php');
 	require('mail/PHPMailer/PHPMailer.php');
 
@@ -73,14 +78,18 @@ try {
 
     $mail->send();
     //echo 'Gửi email thành công';
-	$message = "Đăng ký tài khoản thành công.";
-			echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=logincontroller&action=login'>Đăng nhập</a>";
-			exit;	
+
 } catch (Exception $e) {
     echo "Không gửi được email. email lỗi: {$mail->ErrorInfo}";
 }
 
-	
+		exit;
+	}else{
+		$alert = '<div class="alert alert-danger" role="alert"> Đăng ký tài khoản thất bại. </div>';
+		include './view/register.php';
+		exit;
+	}
+
 }
 
 

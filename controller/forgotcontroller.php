@@ -29,8 +29,8 @@ if($action=='submit')
 {
 	$email =$_POST['txt_email'];
     if($ngd->nguoidungcoemail($email)<=0){
-		$message = "Tài khoản email không tồn tại";
-		echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=registercontroller&action=register'>Đăng Ký</a>";	
+        $alert = '<div class="alert alert-danger" role="alert"> Tài khoản email không tồn tại! </div>';
+		include './view/forgotpass.php';
 		exit;
 	}
 	$maxacthuc = rand_string(7);
@@ -40,7 +40,11 @@ if($action=='submit')
     $_SESSION["email"]= $email;
     $data = $ngd->capnhatmaxacthuc($email, $maxacthuc);
     
-
+    if($data)
+	{
+		$alert = '<div class="alert alert-primary" role="alert"> Chúng tôi đã gửi mã xác thực cho bạn. Vui lòng kiểm tra email! </div>';
+		include './view/xacthuc.php';
+		
     require('mail/PHPMailer/Exception.php');
 	require('mail/PHPMailer/SMTP.php');
 	require('mail/PHPMailer/PHPMailer.php');
@@ -75,13 +79,16 @@ try {
 
     $mail->send();
     //echo 'Gửi email thành công';
-	$message = "Chúng tôi đã gửi mã xác thực cho bạn. Vui lòng kiểm tra email !";
-					echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='index.php?controller=xacthuccontroller&action=xacthuc'>Nhập mã xác thực</a>";
-					exit;
+					
 } catch (Exception $e) {
     echo "Không gửi được email. email lỗi: {$mail->ErrorInfo}";
 }
-
+exit;
+}else{
+    $alert = '<div class="alert alert-danger" role="alert"> Gửi thất bại! </div>';
+    include './view/forgotpass.php';
+    exit;
+}
 
     
 }

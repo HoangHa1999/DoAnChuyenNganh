@@ -34,10 +34,8 @@ if($action=='submit')
             exit();
 		}
 	}
-	$message = "Đăng nhập thất bại. Vui lòng kiểm tra lại tài khoản và mật khẩu.";
-			echo "<script type='text/javascript'>alert('$message');</script> Nhấn vào đây để <a href='javascript: history.go(-1)'>Trở lại</a>";
-			exit;	
-
+	$alert = '<div class="alert alert-danger" role="alert"> Đăng nhập thất bại tài khoản email hoặc mật khẩu của bạn không chính xác </div>';
+	include './view/login.php';
 }
 
 if($action='logout')

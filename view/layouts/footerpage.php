@@ -3,7 +3,7 @@
         <div class="row mb-5">
           <div class="col-sm-12 col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2 logo"><a href="#">TH <span>COFFEE</span></a></h2>
+              <h2 class="ftco-heading-2 logo"><a href="index.php">TH-<span>Coffee</span></a></h2>
               <p>Dành những thứ tốt nhất cho khách hàng.</p>
               
             </div>

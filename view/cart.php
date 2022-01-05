@@ -23,6 +23,9 @@
 
 	<?php
 	
+	if(isset($alert)){
+	  echo $alert;
+	}
 
 	if(!empty($_SESSION["cart"])){
 	?>

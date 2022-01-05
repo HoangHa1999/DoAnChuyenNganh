@@ -42,6 +42,11 @@ return false;
           <div class="col-xl-10 ftco-animate">
 						<form name="f1" action="index.php?controller=registercontroller&action=submit" method="POST" onsubmit="return matchpass()" class="billing-form">
 							<h3 class="mb-4 billing-heading">Thông Tin Đăng Ký</h3>
+							<?php
+              if(isset($alert)){
+                echo $alert;
+              }
+              ?>
 	          	<div class="w-100"></div>
                     <div class="col-md-12">
 	                <div class="form-group">
