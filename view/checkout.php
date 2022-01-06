@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include "layouts/headerpage.php" ?>
+    <?php include "view/layouts/headerpage.php" ?>
   </head>
   <body>
-  	<?php include "layouts/menupage.php" ?>
+  	<?php include "view/layouts/menupage.php" ?>
     <!-- END nav -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/slider-02.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('view/images/slider-02.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -112,7 +112,7 @@
 	          		<div class="cart-detail cart-total p-3 p-md-4">
 	          			<h3 class="billing-heading mb-4">Cart Total</h3>
 	          						<?php
-	          						include '../util/TienUtil.php';
+	          						include 'util/TienUtil.php';
 	          						$arraycart = array("Subtotal","Delivery","Discount");
 	          						$arraygia = array(2,0,0.5);
 	          						for($i =0;$i <3;$i++){
@@ -161,9 +161,9 @@
     </section>
 
     <footer class="ftco-footer">
-		<?php include 'layouts/footerpage.php' ?>
+		<?php include 'view/layouts/footerpage.php' ?>
     </footer>
     <!-- loader -->
-   <?php include "layouts/loaderpage.php" ?>
+   <?php include "view/layouts/loaderpage.php" ?>
   </body>
 </html>

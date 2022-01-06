@@ -23,7 +23,7 @@
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form  action="index.php?controller=logincontroller&action=submit" method="POST" class="billing-form">
+						<form  action="index.php?controller=logincontroller&action=submit" method="POST" class="form-group">
 							<h3 class="mb-4 billing-heading">Thông Tin Đăng Nhập</h3>
               <?php
               if(isset($alert)){

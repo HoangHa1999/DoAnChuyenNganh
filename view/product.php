@@ -40,13 +40,10 @@
                                                             </select>
 							</div>
 						</div>
-						<div class="row" style="width:1150px; ">
+						<div class="row">
 						
 							<?php
 				include 'util/TienUtil.php';
-				
-				
-		
 				foreach($data as $value){
 					?>  
 							  <div class="col-md-3 d-flex">

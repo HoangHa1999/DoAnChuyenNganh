@@ -38,7 +38,7 @@ return false;
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form name="f1" action="index.php?controller=changecontroller&action=submit" onsubmit="return matchpass()" method="POST" class="billing-form">
+						<form name="f1" action="index.php?controller=changecontroller&action=submit" onsubmit="return matchpass()" method="POST" class="form-group">
 							<h3 class="mb-4 billing-heading">Đổi Mật Khẩu</h3>
               <?php
               if(isset($alert)){

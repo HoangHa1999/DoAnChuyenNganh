@@ -40,7 +40,7 @@ return false;
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-xl-10 ftco-animate">
-						<form name="f1" action="index.php?controller=registercontroller&action=submit" method="POST" onsubmit="return matchpass()" class="billing-form">
+						<form name="f1" action="index.php?controller=registercontroller&action=submit" method="POST" onsubmit="return matchpass()" class="form-group">
 							<h3 class="mb-4 billing-heading">Thông Tin Đăng Ký</h3>
 							<?php
               if(isset($alert)){

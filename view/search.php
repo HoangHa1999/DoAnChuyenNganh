@@ -25,7 +25,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="row" style="width:1150px; ">
+						<div class="row">
 						
 							<?php
 				include 'util/TienUtil.php';	
@@ -46,7 +46,7 @@
 										  <span class="category"><?php echo $value['tendanhmuc'] ?></span>
 										  <h2><?php echo $value['tensanpham'] ?></h2>
 					  <p class="mb-0"><span class="price price-sale"><?php echo giagoc($value['gia']) ?></span> <span class="price"><?php echo chuyentien($value['gia']) ?></span></p>
-						   <a href="index.php?controller=sanphamcontroller&action=productdetail&id=<?php echo $value['id_sp'] ?>"><button class="btn btn-primary py-3 px-5 mr-2"> Thêm vào giỏ hàng </button> </a>
+						  
 									  </div>
 								  </div>
 							  </div>
