@@ -49,4 +49,12 @@ $c = isset($_GET['controller'])?$_GET['controller']:'trangchu';
                 {
                     include './controller/xacthuccontroller.php';
                 }
+                if ($c=='paymentcontroller')
+                {
+                    include './controller/paymentcontroller.php';
+                }
+                if ($c=='infocontroller')
+                {
+                    include './controller/infocontroller.php';
+                }
 ?>

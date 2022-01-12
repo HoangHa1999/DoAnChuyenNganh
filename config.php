@@ -1,6 +1,6 @@
 <?php 
 define('HOST', 'localhost');
-define('DB', 'bannuoc');
+define('DB', 'dbbannuoc');
 define('USER', 'root');
 define('PW', '');
 

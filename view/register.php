@@ -134,11 +134,6 @@ return false;
               
               <p>Đã có tài khoản nhấn: <a href="index.php?controller=logincontroller&action=login"> Đăng Nhập </a></p>
 				
-                <div class="w-100"></div>
-                <div class="col-sm-12 col-md">
-            <div class="ftco-footer-widget mb-4">
-             
-             
 
 	          </div>
           </div> <!-- .col-md-8 -->

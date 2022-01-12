@@ -42,6 +42,12 @@ class nguoidungmodel extends Db
       return $this->updateQuery($sql);
     }
 
+    function capnhatthongtin($id_ngd, $email, $ten, $gt, $diachi, $sdt)
+    {
+      $sql = "UPDATE nguoidung SET email = '$email', tennguoidung = '$ten', gioitinh = '$gt', diachi = '$diachi', sdt = '$sdt' WHERE  id_ngd = '$id_ngd'";
+      return $this->updateQuery($sql);
+    }
+
     function search($kw)
     {
       $sql="SELECT * FROM nguoidung where tennguoidung like ?";

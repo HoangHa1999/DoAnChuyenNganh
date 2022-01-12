@@ -75,7 +75,7 @@
 			<div class="row mt-5">
           <div class="col-md-12 nav-link-wrap">
             <div class="nav nav-pills d-flex text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-			<div class="alert alert-dark" role="alert">Thông tin</div>
+			<div class="alert alert-info" role="alert">Thông tin</div>
 
             </div>
           </div>

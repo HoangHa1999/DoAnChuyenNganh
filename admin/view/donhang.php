@@ -42,19 +42,19 @@
                         <div class="card-header">
                             Danh Sách Đơn Hàng
                         </div>
-                        <div class="card-header">
+                         <!-- <div class="card-header">
                         <a href="donhangcreatepage.php" class="btn btn-primary btn-round ml-auto">
-                        Thêm Đơn Hàng</a>
+                        Thêm Đơn Hàng</a> 
                         
-                        </div>
+                        </div> -->
                         <div class="table-responsive">
                             <table class="table table-striped" id="table1">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Khách hàng</th>
-                                        <th>Ngày lập</th>
-                                        
+                                        <th>SĐT</th>
+                                        <th>Ngày lập</th> 
                                         <th>Giờ giao</th>
                                         <th>Nơi giao</th>
                                         <th>Thành tiền</th>
@@ -71,7 +71,7 @@
                                         }
                                         $conn= new MySQLUtils();
                                         $conn->connectDB();
-                                        $sql = "SELECT * FROM donhang join nguoidung on donhang.id_nguoidung = nguoidung.id_ngd";
+                                        $sql = "SELECT * FROM donhang";
                                         $result = $conn->selectQuery($sql);
         
                                     foreach($result as $value){
@@ -85,7 +85,8 @@
                                     }
                                     echo '<tr>';
                                         echo    '<td>'.$value['id_dh'].'</td>';
-                                        echo    '<td>'.$value['tennguoidung'].'</td>';
+                                        echo    '<td>'.$value['tennguoinhan'].'</td>';
+                                        echo    '<td>'.$value['sdt'].'</td>';
                                         echo    '<td>'.$value['ngaylap'].'</td>';
                                         echo    '<td>'.$value['giogiao'].'</td>';
                                         echo    '<td>'.$value['noigiao'].'</td>';
@@ -116,13 +117,13 @@
                                         </td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="donhangeditpage.php?id='.$value['id_dh'].'" type="submit" data-toggle="tooltip" title="" class="btn btn-primary btn-round ml-auto" data-original-title="Edit Task">
+                                             <!-- <a href="donhangeditpage.php?id='.$value['id_dh'].'" type="submit" data-toggle="tooltip" title="" class="btn btn-primary btn-round ml-auto" data-original-title="Edit Task">
                                                     <svg class="bi" width="1em" height="1em" fill="currentColor">
                                                        <use
                                                     xlink:href="assets/vendors/bootstrap-icons/bootstrap-icons.svg#pencil-square" />
                                                     </svg>
                                                     Sửa
-                                                </a>
+                                                </a> -->
                                                
                                                 <a href="donhangdeletepage.php?id='.$value['id_dh'].'" type="submit" data-toggle="tooltip" title="" class="btn btn-primary btn-round ml-auto" data-original-title="Remove">
                                                      <svg class="bi" width="1em" height="1em" fill="currentColor">

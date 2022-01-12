@@ -35,15 +35,8 @@ $ngd=new nguoidungmodel();
 					}else{
 				?>
 					<p class="mb-0">
-					<ul class="navbar-nav ml-auto">	
-         <a class="nav-link dropdown-toggle" id="dropdown03" data-toggle="dropdown"><font color="white"><span>Xin chào </span><?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?></a></font>
-              <div class="dropdown-menu" aria-labelledby="dropdown03">
-			  <a class="dropdown-item" href="index.php?controller=changecontroller&action=changepass"> Đổi mật khẩu</a>  
-			  </ul>
-              </div>
-					</p>
-					<p class="mb-0">
-					<a class="dropdown-item" href="index.php?controller=logincontroller&action=logout"><font color="white">Đăng xuất</font></a>
+					<font color="white"><span>Xin chào </span><?php $ttngd = $ngd->nguoidungcoma($_SESSION["idnguoidung"]); echo $ttngd[0]['tennguoidung'] ?></a></font>&nbsp;/&nbsp;
+					<a href="index.php?controller=logincontroller&action=logout"><font color="white">Đăng xuất </font></a>
 					</p>
 				<?php
 					}
@@ -75,6 +68,9 @@ $ngd=new nguoidungmodel();
 			  <li class="nav-item"><a href="index.php?controller=sanphamcontroller&action=product" class="nav-link">Sản Phẩm</a></li>
 	          <li class="nav-item"><a href="index.php?controller=aboutcontroller&action=about" class="nav-link">Giới Thiệu</a></li>
 	          <li class="nav-item"><a href="index.php?controller=contactcontroller&action=contact" class="nav-link">Liên Hệ</a></li>
+			  <?php  if(isset($_SESSION["idnguoidung"])) { ?>
+				<li class="nav-item"><a href="index.php?controller=infocontroller&action=information" class="nav-link">Thông Tin Cá Nhân</a></li>
+				<?php } ?>
 	        </ul>
 	      </div>
 	    </div>

@@ -52,7 +52,7 @@
 	            <p>Mong muốn mang đến cho khách hàng của TH - Coffee những sản phẩm chất lượng nhất, tươi xanh nhất, tinh túy nhất từ những nguồn nông sản thuần khiết nhất của người dân Việt Nam.</p>
 	            <p class="year">
 	            	<strong class="number" data-number="15">0</strong>
-		            <span>Kinh nghiệm nhiều năm trong kinh doanh</span>
+		            <span>Kinh nghiệm trong kinh doanh</span>
 	            </p>
 	          </div>
 

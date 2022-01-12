@@ -12,7 +12,7 @@ Class MySQLUtils{
       $this->servername = "localhost";
       $this->username = "root";
       $this->password = "";
-      $this->dbname = "bannuoc";
+      $this->dbname = "dbbannuoc";
       if(self::$conn == NULL){
         $this->connectDB();
       }

@@ -111,9 +111,9 @@ if(empty($_SESSION["username"])){
                                 <li class="submenu-item ">
                                     <a href="donhang.php">Đơn hàng</a>
                                 </li>
-                                <li class="submenu-item ">
+                               <!-- <li class="submenu-item ">
                                     <a href="donhangcreatepage.php">Thêm đơn hàng</a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="sidebar-item  has-sub">

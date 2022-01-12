@@ -13,9 +13,4 @@ if($action=='about')
     include './view/about.php';
 }
 
-if($action=='checkout')
-{
-    include './view/checkout.php';
-}
-
 ?>

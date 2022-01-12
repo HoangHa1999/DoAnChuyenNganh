@@ -18,9 +18,9 @@
         </div>
       </div>
     </section>
-
-    <?php include "view/layouts/containerpage.php"?>
-
+    <section class="ftco-section testimony-section">
+         <?php include "./view/layouts/containerpage.php"?>
+      </section>
   
     <section class="ftco-section testimony-section img" style="background-image: url(view/images/about-bg.jpg);">
     	<div class="overlay"></div>
