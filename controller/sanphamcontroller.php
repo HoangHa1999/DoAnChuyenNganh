@@ -38,6 +38,9 @@ if ($action=='search')
 {
     $kw = isset($_GET['kw'])?$_GET['kw']:'';
     $data =$sp->search($kw);
+    if(empty($data))
+        $alert = '<center><div class="alert alert-danger" role="alert"> Không tìm thấy sản phẩm! </div></center>';
+
     include './view/search.php';
 }
 

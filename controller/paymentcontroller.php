@@ -65,7 +65,7 @@ $ctdh = new chitietdonhangmodel();
 						$content .="</table>";
 
 						unset($_SESSION['cart']);
-						$alert = '<div class="alert alert-success" role="alert"> Đặt hàng thành công! </div>';
+						$alert = '<center><div class="alert alert-success" role="alert"> Đặt hàng thành công! </div></center>';
 						include './view/checkout.php';
 
 	require('mail/PHPMailer/Exception.php');
@@ -108,7 +108,7 @@ try {
 }
 exit;
 						}else{
-							$alert = '<div class="alert alert-danger" role="alert"> Đặt hàng thất bại! </div>';
+							$alert = '<center><div class="alert alert-danger" role="alert"> Đặt hàng thất bại! </div></center>';
 							include './view/cart.php';
 							exit;
 						}

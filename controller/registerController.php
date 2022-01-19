@@ -32,7 +32,7 @@ if($action=='submit')
 	
 	
 	if($ngd->nguoidungcoemail($email)>0){
-		$alert = '<div class="alert alert-danger" role="alert"> Tài khoản email đã tồn tại. </div>';
+		$alert = '<center><div class="alert alert-danger" role="alert"> Tài khoản email đã tồn tại. </div></center>';
 		include './view/register.php';
 		exit;
 	}
@@ -41,7 +41,7 @@ if($action=='submit')
 	
 	if($data)
 	{
-		$alert = '<div class="alert alert-success" role="alert"> Đăng ký tài khoản thành công. </div>';
+		$alert = '<center><div class="alert alert-success" role="alert"> Đăng ký tài khoản thành công. </div></center>';
 		include './view/register.php';
 
 		require('mail/PHPMailer/Exception.php');
@@ -85,7 +85,7 @@ try {
 
 		exit;
 	}else{
-		$alert = '<div class="alert alert-danger" role="alert"> Đăng ký tài khoản thất bại. </div>';
+		$alert = '<center><div class="alert alert-danger" role="alert"> Đăng ký tài khoản thất bại. </div></center>';
 		include './view/register.php';
 		exit;
 	}

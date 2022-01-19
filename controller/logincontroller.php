@@ -34,7 +34,7 @@ if($action=='submit')
             exit();
 		}
 	}
-	$alert = '<div class="alert alert-danger" role="alert"> Đăng nhập thất bại tài khoản email hoặc mật khẩu của bạn không chính xác </div>';
+	$alert = '<center><div class="alert alert-danger" role="alert"> Đăng nhập thất bại tài khoản email hoặc mật khẩu của bạn không chính xác </div></center>';
 	include './view/login.php';
 }
 

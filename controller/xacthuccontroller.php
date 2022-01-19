@@ -28,7 +28,7 @@ if($action=='submit')
    
     if($nguoidung[0]['maxacthuc'] != $mxt)
     {
-        $alert = '<div class="alert alert-danger" role="alert"> Mã xác thực không chính xác. Vui lòng kiểm tra lại! </div>';
+        $alert = '<center><div class="alert alert-danger" role="alert"> Mã xác thực không chính xác. Vui lòng kiểm tra lại! </div></center>';
 		include './view/xacthuc.php';
 		exit;
     }
@@ -36,11 +36,11 @@ if($action=='submit')
     $data = $ngd->capnhatpass($email, $pw);
     if($data)
 	{
-        $alert = '<div class="alert alert-success" role="alert"> Cập nhật mật khẩu thành công! </div>';
+        $alert = '<center><div class="alert alert-success" role="alert"> Cập nhật mật khẩu thành công! </div></center>';
 		include './view/xacthuc.php';
 		exit;
     }else{
-        $alert = '<div class="alert alert-danger" role="alert"> Cập nhật mật khẩu thất bại! </div>';
+        $alert = '<center><div class="alert alert-danger" role="alert"> Cập nhật mật khẩu thất bại! </div></center>';
 		include './view/xacthuc.php';
 		exit;
     }

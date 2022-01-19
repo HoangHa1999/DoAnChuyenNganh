@@ -34,11 +34,11 @@ if($action=='submit')
 	
 	if($data)
 	{
-		$alert = '<div class="alert alert-success" role="alert"> Cập nhật thông tin thành công. </div>';
+		$alert = '<center><div class="alert alert-success" role="alert"> Cập nhật thông tin thành công. </div></center>';
 		include './view/information.php';
 		exit;
 	}else{
-		$alert = '<div class="alert alert-danger" role="alert"> Cập nhật thông tin thất bại. </div>';
+		$alert = '<center><div class="alert alert-danger" role="alert"> Cập nhật thông tin thất bại. </div></center>';
 		include './view/information.php';
 		exit;
 	}

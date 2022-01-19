@@ -28,7 +28,7 @@ if($action=='submit')
 	$email = $nguoidung[0]['email'];
    
 	if($ngd->nguoidungcopass($pwcu)<=0){
-		$alert = '<div class="alert alert-danger" role="alert"> Mật khẩu không chính xác. </div>';
+		$alert = '<center><div class="alert alert-danger" role="alert"> Mật khẩu không chính xác. </div></center>';
 		include './view/changepass.php';
 		exit;
 		
@@ -39,11 +39,11 @@ if($action=='submit')
 
 	if($data)
 	{
-		$alert = '<div class="alert alert-success" role="alert"> Đổi mật khẩu thành công!. </div>';
+		$alert = '<center><div class="alert alert-success" role="alert"> Đổi mật khẩu thành công!. </div></center>';
 		include './view/changepass.php';
 		exit;
 	}else{
-		$alert = '<div class="alert alert-danger" role="alert"> Đổi mật khẩu thất bại!. </div>';
+		$alert = '<center><div class="alert alert-danger" role="alert"> Đổi mật khẩu thất bại!. </div></center>';
 		include './view/changepass.php';
 		exit;
 	}

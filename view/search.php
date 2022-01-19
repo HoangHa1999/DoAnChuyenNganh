@@ -20,6 +20,11 @@
       </div>
     </section>
 
+	<?php
+              if(isset($alert)){
+                echo $alert;
+              }
+              ?>
 	
    <section class="ftco-section">
 			<div class="container">

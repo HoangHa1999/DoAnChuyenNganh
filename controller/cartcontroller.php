@@ -99,7 +99,7 @@ if(!isset($_SESSION["cart"]))
 					}
 						
 				}else{
-					$alert = '<div class="alert alert-danger" role="alert"> Bạn chưa đăng nhập. Vui lòng đăng nhập để đặt hàng! </div>';
+					$alert = '<center><div class="alert alert-danger" role="alert"> Bạn chưa đăng nhập. Vui lòng đăng nhập để đặt hàng! </div></center>';
 					include './view/cart.php';
 					exit;
 				}

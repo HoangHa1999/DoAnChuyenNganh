@@ -29,7 +29,7 @@ if($action=='submit')
 {
 	$email =$_POST['txt_email'];
     if($ngd->nguoidungcoemail($email)<=0){
-        $alert = '<div class="alert alert-danger" role="alert"> Tài khoản email không tồn tại! </div>';
+        $alert = '<center><div class="alert alert-danger" role="alert"> Tài khoản email không tồn tại! </div></center>';
 		include './view/forgotpass.php';
 		exit;
 	}
@@ -42,7 +42,7 @@ if($action=='submit')
     
     if($data)
 	{
-		$alert = '<div class="alert alert-primary" role="alert"> Chúng tôi đã gửi mã xác thực cho bạn. Vui lòng kiểm tra email! </div>';
+		$alert = '<center><div class="alert alert-primary" role="alert"> Chúng tôi đã gửi mã xác thực cho bạn. Vui lòng kiểm tra email! </div></center>';
 		include './view/xacthuc.php';
 		
     require('mail/PHPMailer/Exception.php');
@@ -85,7 +85,7 @@ try {
 }
 exit;
 }else{
-    $alert = '<div class="alert alert-danger" role="alert"> Gửi thất bại! </div>';
+    $alert = '<center><div class="alert alert-danger" role="alert"> Gửi thất bại! </div></center>';
     include './view/forgotpass.php';
     exit;
 }
